@@ -189,8 +189,9 @@ function drawChart() {
     'chartType': 'LineChart',
     'containerId': 'chart_div',
     'options': {
-      'width': 1000,
-      'height': 800,
+      'chartArea': { width: '100%',height:'50%',left:40, right:40},
+      'legend': {position: 'top',height:'50%'},
+      'width': '100%',
       'vAxis': {title: 'contibution'},
       'hAxis': {title: 'time'},
       'pieSliceText': 'value',
