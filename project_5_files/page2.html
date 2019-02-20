@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html>
-<title>Page 2</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/extras.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<head>
+  <title>Progress</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/extras.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">PAGE 2</a>
-    <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">PAGE 3</a>
-    <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">PAGE 4</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Log</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Progress <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page3.html">Recipes</a>
+      </li>
+    </ul>
+      <ul class="nav navbar-item navbar-right">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings <span class="glyphicon glyphicon-cog"></span>
+          <ul class="dropdown-menu">
+            <li><a href="#">Log Out</li>
+            <li><a href="#">Account Settings</a></li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+
+  <div class="jumbotron text-center">
+    <h1>Progress</h1>
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 2</a>
-      <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 3</a>
-      <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 4</a>
-      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">PAGE <span class="w3-hide-small">TWO</span> LOGO</span>
-  </div>
-</div>
 
 <!--Div that will hold the dashboard-->
 <div id="dashboard_div">
@@ -48,6 +58,130 @@
   <div id="time_div"></div>
   <div id="chart_div"></div>
 </div>
+
+
+
+<div class="container-fluid text-center">
+  <h2>BADGES</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off"></span>
+      <h4>FIRST LOG</h4>
+      <p>Log 1 item</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart"></span>
+      <h4>GOOD HABITS</h4>
+      <p>Log for 5 days in a row</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock"></span>
+      <h4>VEGGIE LOVER</h4>
+      <p>Eat one meatless meal</p>
+    </div>
+    </div>
+    <br><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf"></span>
+      <h4>VEGGIE MONSTER</h4>
+      <p>Eat 10 meatless meals</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate"></span>
+      <h4>FRESH AIR</h4>
+      <p>Eat 5 meals without producing 2 lbs of carbon dioxide</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench"></span>
+      <h4>FIRE</h4>
+      <p>Log for 10 days in a row</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center">
+  <h2>WATER SAVED</h2>
+  <br>
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">x gallons</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">y showers</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">You saved a lot of water</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center">
+  <h2>CARBON DIOXIDE NOT EMITTED</h2>
+  <br>
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">x lbs</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">y miles</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">z hours of light</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center">
+  <h2>ANIMALS SAVED</h2>
+  <br>
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">x cows</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">y pigs</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">z fish</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">z chickens</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -61,6 +195,8 @@
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+
+
 
 <script>
 // Modal Image Gallery
