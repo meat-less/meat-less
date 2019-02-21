@@ -7,7 +7,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/w3.css">
@@ -106,21 +106,21 @@
   <br>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Water_1522699.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">x gallons</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Shower_670980.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">y showers</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Corn_569330.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">You saved a lot of water</p>
+        <p class="card-text">z crops watered</p>
       </div>
     </div>
   </div>
@@ -131,19 +131,19 @@
   <br>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_co2_1970676.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">x lbs</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Car_1825816.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">y miles</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_lightbulb_1262995.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">z hours of light</p>
       </div>
@@ -156,25 +156,19 @@
   <br>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Cow_1050214.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">x cows</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Pig_160982.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">y pigs</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <p class="card-text">z fish</p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Chicken_2106094.png" alt="Card image cap">
       <div class="card-body">
         <p class="card-text">z chickens</p>
       </div>
@@ -238,7 +232,7 @@ google.charts.setOnLoadCallback(drawChart);
 
 // Draw the chart and set the chart values
 function drawChart() {
-  
+
   // Create our data table.
   var data = google.visualization.arrayToDataTable([
     ['TimeUnit','Month', 'Servings Eaten','Macro'],
@@ -290,7 +284,7 @@ function drawChart() {
   // Create a dashboard.
   var dashboard = new google.visualization.Dashboard(
       document.getElementById('dashboard_div'));
-  
+
   // Create a range slider, passing some options
   var macroRangeSlider = new google.visualization.ControlWrapper({
     'controlType': 'CategoryFilter',
