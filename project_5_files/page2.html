@@ -50,16 +50,7 @@
     <h1>Progress</h1>
   </div>
 
-
-<!--Div that will hold the dashboard-->
-<div id="dashboard_div">
-  <!--Divs that will hold each control and chart-->
-  <div id="macro_div"></div>
-  <div id="time_div"></div>
-  <div id="chart_div"></div>
-</div>
-
-
+<iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOTk0M2I4NWQtYmE3NC00MmNjLTgxZTEtYTAxODNhMzg0MTg1IiwidCI6IjdjMjg0ZDg0LThkN2UtNDJhYi1hMzEwLTQ2MzA4N2RhZjFkZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
 
 <div class="container-fluid text-center">
   <h2>BADGES</h2>
@@ -227,120 +218,5 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-//---------------------------------------------------------------------------------------------------------
-</script>
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-// Load google charts
-google.charts.load('current', {'packages':['corechart','controls']});
-google.charts.setOnLoadCallback(drawChart);
-
-// Draw the chart and set the chart values
-function drawChart() {
-  
-  // Create our data table.
-  var data = google.visualization.arrayToDataTable([
-    ['TimeUnit','Month', 'Servings Eaten','Macro'],
-    ['Month','June' , 5, 'Water'],
-    ['Month','July', 7, 'Water'],
-    ['Month','August', 3, 'Water'],
-    ['Month','September', 2, 'Water'],
-    ['Month','November', 6,'Water'],
-    ['Month','December', 1,'Water'],
-    ['Month','January', 8, 'Water'],
-    ['Month','June' , 3, 'Meat'],
-    ['Month','July', 2, 'Meat'],
-    ['Month','August', 9, 'Meat'],
-    ['Month','September', 6, 'Meat'],
-    ['Month','November', 4,'Meat'],
-    ['Month','December', 3,'Meat'],
-    ['Month','January', 1, 'Meat'],
-    ['Month','June' , 5, 'CO2'],
-    ['Month','July', 4, 'CO2'],
-    ['Month','August', 9, 'CO2'],
-    ['Month','September', 3, 'CO2'],
-    ['Month','November', 2,'CO2'],
-    ['Month','December', 1,'CO2'],
-    ['Month','January', 6, 'CO2'],
-    ['Day','Monday' , 2, 'Water'],
-    ['Day','Tuesday', 9, 'Water'],
-    ['Day','Wednesday', 4, 'Water'],
-    ['Day','Thursday', 1, 'Water'],
-    ['Day','Friday', 9,'Water'],
-    ['Day','Saturday', 3,'Water'],
-    ['Day','Sunday', 4, 'Water'],
-    ['Day','Monday' , 6, 'Meat'],
-    ['Day','Tuesday', 6, 'Meat'],
-    ['Day','Wednesday', 5, 'Meat'],
-    ['Day','Thursday', 1, 'Meat'],
-    ['Day','Friday', 2,'Meat'],
-    ['Day','Saturday', 5,'Meat'],
-    ['Day','Sunday', 2, 'Meat'],
-    ['Day','Monday' , 5, 'CO2'],
-    ['Day','Tuesday', 8, 'CO2'],
-    ['Day','Wednesday', 3, 'CO2'],
-    ['Day','Thursday', 2, 'CO2'],
-    ['Day','Friday', 9,'CO2'],
-    ['Day','Saturday', 2,'CO2'],
-    ['Day','Sunday', 4, 'CO2']
-
-  ]);
-
-  // Create a dashboard.
-  var dashboard = new google.visualization.Dashboard(
-      document.getElementById('dashboard_div'));
-  
-  // Create a range slider, passing some options
-  var macroRangeSlider = new google.visualization.ControlWrapper({
-    'controlType': 'CategoryFilter',
-    'containerId': 'macro_div',
-    'options': {
-      'filterColumnLabel': 'Macro',
-      'ui': {
-                label: 'Show a different effect',
-                allowTyping: false,
-                allowMultiple: false,
-                showRangeValues: true
-      }
-    }
-  });
-
-  var timeRangeSlider = new google.visualization.ControlWrapper({
-    'controlType': 'CategoryFilter',
-    'containerId': 'time_div',
-    'options': {
-      'filterColumnLabel': 'TimeUnit',
-      'ui': {
-                label: 'See more times',
-                allowTyping: false,
-                allowMultiple: false,
-                showRangeValues: true
-      }
-    }
-  });
-
-  // Create a pie chart, passing some options
-  var lineChart = new google.visualization.ChartWrapper({
-    'chartType': 'LineChart',
-    'containerId': 'chart_div',
-    'options': {
-      'chartArea': { width: '100%',height:'50%',left:40, right:40},
-      'legend': {position: 'top',height:'50%'},
-      'width': '100%',
-      'vAxis': {title: 'contibution'},
-      'hAxis': {title: 'time'},
-      'pieSliceText': 'value',
-      'legend': 'right'
-    },
-      'view': {'columns': [1, 2]}
-  });
-
-  dashboard.bind(macroRangeSlider, lineChart);
-  dashboard.bind(timeRangeSlider, lineChart);
-
-  dashboard.draw(data);
-}
-</script>
 </body>
 </html>
