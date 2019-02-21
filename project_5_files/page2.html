@@ -60,16 +60,7 @@
     <h1>Progress</h1>
   </div>
 
-
-<!--Div that will hold the dashboard-->
-<div id="dashboard_div">
-  <!--Divs that will hold each control and chart-->
-  <div id="macro_div"></div>
-  <div id="time_div"></div>
-  <div id="chart_div"></div>
-</div>
-
-
+<iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOTk0M2I4NWQtYmE3NC00MmNjLTgxZTEtYTAxODNhMzg0MTg1IiwidCI6IjdjMjg0ZDg0LThkN2UtNDJhYi1hMzEwLTQ2MzA4N2RhZjFkZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
 
 <div class="container-fluid text-center">
   <h2>BADGES</h2>
@@ -238,6 +229,7 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
 //---------------------------------------------------------------------------------------------------------
 </script>
 
@@ -352,5 +344,6 @@ function drawChart() {
   dashboard.draw(data);
 }
 </script>
+
 </body>
 </html>
