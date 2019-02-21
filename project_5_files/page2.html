@@ -7,12 +7,14 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/w3.css">
-  <link rel="stylesheet" href="css/extras.css">
+  <!--link rel="stylesheet" href="css/w3.css"-->
+  <!--link rel="stylesheet" href="css/extras.css"-->
+  <link rel="stylesheet" href="css/stylesheet_amy.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
@@ -20,10 +22,14 @@
 
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" id="logo">Meat-less</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="index.html">Log</a>
       </li>
@@ -35,7 +41,11 @@
       </li>
     </ul>
       <ul class="nav navbar-item navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings <span class="glyphicon glyphicon-cog"></span>
+        <!--li class="dropdown">
+        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings 
+        		<span class="glyphicon glyphicon-cog"></span-->
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <img class="card-img-top" id="setting-icon" src="images/settings-cog.png" alt="Settings">
           <ul class="dropdown-menu">
             <li><a href="#">Log Out</li>
             <li><a href="#">Account Settings</a></li>
@@ -57,37 +67,44 @@
   <br>
   <div class="row">
     <div class="col-sm-4">
+      <div class="badges">
       <span class="glyphicon glyphicon-off"></span>
-      <h4>FIRST LOG</h4>
-      <p>Log 1 item</p>
+      <h4 class="earned-text">First Log</h4>
+      <p class="earned-text">Log 1 item</p>
+    </div>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart"></span>
-      <h4>GOOD HABITS</h4>
-      <p>Log for 5 days in a row</p>
+      <div class="badges">
+        <span class="glyphicon glyphicon-heart"></span>
+      <h4 class="earned-text">Good Habits</h4>
+      <p class="earned-text">Log for 5 days in a row</p></div>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock"></span>
-      <h4>VEGGIE LOVER</h4>
-      <p>Eat one meatless meal</p>
+      <div class="badges">
+        <span class="glyphicon glyphicon-lock"></span>
+      <h4 class="earned-text">Veggie Lover</h4>
+      <p class="earned-text">Eat one meatless meal</p></div>
     </div>
     </div>
     <br><br>
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf"></span>
-      <h4>VEGGIE MONSTER</h4>
-      <p>Eat 10 meatless meals</p>
+      <div class="badges unearned">
+        <span class="glyphicon glyphicon-leaf"></span>
+      <h4 class="unearned-text">Veggie Monster</h4>
+      <p class="unearned-text">Eat 10 meatless meals</p></div>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate"></span>
-      <h4>FRESH AIR</h4>
-      <p>Eat 5 meals without producing 2 lbs of carbon dioxide</p>
+      <div class="badges">
+        <span class="glyphicon glyphicon-certificate"></span>
+      <h4 class="earned-text">Fresh Air</h4>
+      <p class="earned-text">Eat 5 meals without producing 2 lbs of carbon dioxide</p></div>
     </div>
     <div class="col-sm-4">
+      <div class="badges unearned">
       <span class="glyphicon glyphicon-wrench"></span>
-      <h4>FIRE</h4>
-      <p>Log for 10 days in a row</p>
+      <h4 class="unearned-text">Fire</h4>
+      <p class="unearned-text">Log for 10 days in a row</p></div>
     </div>
   </div>
 </div>
@@ -97,21 +114,21 @@
   <br>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Water_1522699.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">x gallons</p>
+        <p class="card-text">27 gallons</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Shower_670980.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">y showers</p>
+        <p class="card-text">1.5 showers</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Corn_569330.png" alt="Corn">
       <div class="card-body">
-        <p class="card-text">You saved a lot of water</p>
+        <p class="card-text">0.7 square miles watered</p>
       </div>
     </div>
   </div>
@@ -122,21 +139,21 @@
   <br>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_co2_1970676.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">x lbs</p>
+        <p class="card-text">70 lbs</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Car_1825816.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">y miles</p>
+        <p class="card-text">57 miles</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_lightbulb_1262995.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">z hours of light</p>
+        <p class="card-text">341 hours of light</p>
       </div>
     </div>
   </div>
@@ -147,34 +164,28 @@
   <br>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Cow_1050214.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">x cows</p>
+        <p class="card-text">2 cows</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Pig_160982.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">y pigs</p>
+        <p class="card-text">3 pigs</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="images/icons/noun_Chicken_2106094.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">z fish</p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <p class="card-text">z chickens</p>
+        <p class="card-text">5 chickens</p>
       </div>
     </div>
   </div>
 </div>
 
 
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+<!--footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -185,7 +196,7 @@
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+</footer-->
 
 
 
@@ -218,5 +229,121 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+//---------------------------------------------------------------------------------------------------------
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart','controls']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+
+  // Create our data table.
+  var data = google.visualization.arrayToDataTable([
+    ['TimeUnit','Month', 'Servings Eaten','Macro'],
+    ['Month','June' , 5, 'Water'],
+    ['Month','July', 7, 'Water'],
+    ['Month','August', 3, 'Water'],
+    ['Month','September', 2, 'Water'],
+    ['Month','November', 6,'Water'],
+    ['Month','December', 1,'Water'],
+    ['Month','January', 8, 'Water'],
+    ['Month','June' , 3, 'Meat'],
+    ['Month','July', 2, 'Meat'],
+    ['Month','August', 9, 'Meat'],
+    ['Month','September', 6, 'Meat'],
+    ['Month','November', 4,'Meat'],
+    ['Month','December', 3,'Meat'],
+    ['Month','January', 1, 'Meat'],
+    ['Month','June' , 5, 'CO2'],
+    ['Month','July', 4, 'CO2'],
+    ['Month','August', 9, 'CO2'],
+    ['Month','September', 3, 'CO2'],
+    ['Month','November', 2,'CO2'],
+    ['Month','December', 1,'CO2'],
+    ['Month','January', 6, 'CO2'],
+    ['Day','Monday' , 2, 'Water'],
+    ['Day','Tuesday', 9, 'Water'],
+    ['Day','Wednesday', 4, 'Water'],
+    ['Day','Thursday', 1, 'Water'],
+    ['Day','Friday', 9,'Water'],
+    ['Day','Saturday', 3,'Water'],
+    ['Day','Sunday', 4, 'Water'],
+    ['Day','Monday' , 6, 'Meat'],
+    ['Day','Tuesday', 6, 'Meat'],
+    ['Day','Wednesday', 5, 'Meat'],
+    ['Day','Thursday', 1, 'Meat'],
+    ['Day','Friday', 2,'Meat'],
+    ['Day','Saturday', 5,'Meat'],
+    ['Day','Sunday', 2, 'Meat'],
+    ['Day','Monday' , 5, 'CO2'],
+    ['Day','Tuesday', 8, 'CO2'],
+    ['Day','Wednesday', 3, 'CO2'],
+    ['Day','Thursday', 2, 'CO2'],
+    ['Day','Friday', 9,'CO2'],
+    ['Day','Saturday', 2,'CO2'],
+    ['Day','Sunday', 4, 'CO2']
+
+  ]);
+
+  // Create a dashboard.
+  var dashboard = new google.visualization.Dashboard(
+      document.getElementById('dashboard_div'));
+
+  // Create a range slider, passing some options
+  var macroRangeSlider = new google.visualization.ControlWrapper({
+    'controlType': 'CategoryFilter',
+    'containerId': 'macro_div',
+    'options': {
+      'filterColumnLabel': 'Macro',
+      'ui': {
+                label: 'Show a different effect',
+                allowTyping: false,
+                allowMultiple: false,
+                showRangeValues: true
+      }
+    }
+  });
+
+  var timeRangeSlider = new google.visualization.ControlWrapper({
+    'controlType': 'CategoryFilter',
+    'containerId': 'time_div',
+    'options': {
+      'filterColumnLabel': 'TimeUnit',
+      'ui': {
+                label: 'See more times',
+                allowTyping: false,
+                allowMultiple: false,
+                showRangeValues: true
+      }
+    }
+  });
+
+  // Create a pie chart, passing some options
+  var lineChart = new google.visualization.ChartWrapper({
+    'chartType': 'LineChart',
+    'containerId': 'chart_div',
+    'options': {
+      'width': 1000,
+      'height': 800,
+      'vAxis': {title: 'contibution'},
+      'hAxis': {title: 'time'},
+      'pieSliceText': 'value',
+      'legend': 'right'
+    },
+      'view': {'columns': [1, 2]}
+  });
+
+  dashboard.bind(macroRangeSlider, lineChart);
+  dashboard.bind(timeRangeSlider, lineChart);
+
+  dashboard.draw(data);
+}
+</script>
+
 </body>
 </html>
