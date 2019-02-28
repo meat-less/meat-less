@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 
 <html>
-<title>W3.CSS Template</title>
+<title>Meat-less</title>
+
+<!--bootstrap stuff-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/extras.css">
+<!--link rel="stylesheet" href="css/w3.css"-->
+<!--link rel="stylesheet" href="css/extras.css"-->
+<link rel="stylesheet" href="css/stylesheet_amy.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
+  <div id="landing">
+    <h1 class="heading">Meat-less</h1>
+    <p class="subtitle">An app to help you eat less meat</p>
+  </div>
+
 <!-- Tab links -->
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
-  <button class="tablinks" onclick="openTab(event, 'Register')">Create an Account</button>
-</div>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-1"></div>
+	<div class="tab col-lg-4" id="select">
+		<button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
+		<button class="tablinks" onclick="openTab(event, 'Register')">Create an Account</button>
+	</div>
+	<div class="col-lg-1"></div>
 
 <!-- Tab content -->
-<div id="Login" class="tabcontent">
+<div id="Login" class="tabcontent col-lg-5">
   <form action="page2.html">
-  <h3>Login</h3>
+  <h3 class="login-header">Login</h3>
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -28,14 +47,13 @@
     <input type="password" placeholder="Enter Password" name="psw" required>
 
     <button type="submit">Login</button>
-    <button type="button" class="cancelbtn">Cancel</button>
   </div>
   </form>
 </div>
 
-<div id="Register" class="tabcontent">
+<div id="Register" class="tabcontent col-lg-5">
   <form action="page2.html">
-  <h3>Register</h3>
+  <h3 class="login-header">Register</h3>
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -44,17 +62,19 @@
     <input type="password" placeholder="Enter Password" name="psw" required>
 
     <button type="submit">Register</button>
-    <button type="button" class="cancelbtn">Cancel</button>
+ 
   </div>
 </form>
+</div>
+</div>
 </div>
 
 <style type="text/css">
   /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  
+  background-color: #e8ecd6;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -66,6 +86,7 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  color: black;
 }
 
 .tabcontent {
@@ -80,20 +101,20 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #a1dd70;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #fdfff0;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  /*border: 1px solid #ccc;
+  border-top: none; */
 }
 
 /* Bordered form */
@@ -113,7 +134,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  background-color: #a1dd70;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -127,12 +148,6 @@ button:hover {
   opacity: 0.8;
 }
 
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
 
 /* Add padding to containers */
 .container {
@@ -151,9 +166,7 @@ span.psw {
     display: block;
     float: none;
   }
-  .cancelbtn {
-    width: 100%;
-  }
+  
 }
 </style>
 
