@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Log 1</title>
+  <title>Log 2</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -25,10 +25,10 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+    
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="page2.html" id="logo">Meat-less</a>
+        <a class="nav-link" href="index.html" id="logo">Meat-less</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Log <span class="sr-only">(current)</span> </a>
@@ -42,12 +42,12 @@
     </ul>
       <ul class="nav navbar-item navbar-right">
         <!--li class="dropdown">
-        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
+        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings 
         		<span class="glyphicon glyphicon-cog"></span-->
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
           <img class="card-img-top" id="setting-icon" src="images/settings-cog.png" alt="Settings">
           <ul class="dropdown-menu">
-            <li><a href="index.html">Log Out</li>
+            <li><a href="#">Log Out</li>
             <li><a href="#">Account Settings</a></li>
           </ul>
         </li>
@@ -57,7 +57,7 @@
 
 
   <div class="jumbotron text-center">
-    <h1> Logging for Natalie</h1>
+    <h1> Logging for Amy</h1>
   </div>
 
 <!--<iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOTk0M2I4NWQtYmE3NC00MmNjLTgxZTEtYTAxODNhMzg0MTg1IiwidCI6IjdjMjg0ZDg0LThkN2UtNDJhYi1hMzEwLTQ2MzA4N2RhZjFkZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>-->
@@ -69,7 +69,7 @@
 
 <div class="row justify-content-center">
 	<div class="col-4 col-xl-2 offset-xl-1" style="float:right">
-
+    
 <div class="dropdown" style="float:right">
   <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Type of Meat
@@ -126,15 +126,15 @@
        </div>
       </div>
      </div>
-
+     
     </form>
    </div>
   </div>
  </div>
 </div>
-
+			
 </div>
-
+	
 <!--
 	<div class="col-4 col-xl-2 offset-xl-1" style="float:right">
 
@@ -146,12 +146,12 @@
        </button>
       </div>
      </div>
-
+		
 	</div>
 -->
-
+	
 </div>
-
+	
 <!--
 			</div>
     </div>
@@ -214,7 +214,7 @@
 	</div>
 	</form>
 <!--
-	<div>
+	<div> 
 		<form>
 		Custom Amount: <input type="text" name="customAmount" value=""><br>
 		</form>
@@ -226,7 +226,7 @@
         Submit
        </button>
 	</div>
-
+	
 <div class="container-fluid text-center" id="serving-size-display" style="display:block">
   <h2></h2>
   <br>
@@ -243,7 +243,7 @@
       </div>
      </div>
 -->
-
+		
 <!--	</div>-->
 </div>
 
@@ -254,21 +254,21 @@
 	var selected2 = false;
 	var selected3 = false;
 	var selectedCustom = false;
-</script>
-
+</script>	
+	
 <script>
 	function update_date() {
 		check_display();
 	}
 </script>
-
+	
 <script>
 	$("#1serving").click(function(a){
     a.preventDefault(); // cancel the link behaviour
     $(this).style="border-style: solid; border-color: black";
 });
 </script>
-
+	
 <script type="text/javascript">
 function submitserving() {
 	if (selected1 == true || selected2 == true || selected3 == true || selectedCustom == true) {
@@ -279,7 +279,7 @@ function submitserving() {
 	}
 }
 </script>
-
+	
 <script>
 	function selectServing1() {
 		if (selected1 == false) {
@@ -314,7 +314,7 @@ function submitserving() {
 			document.getElementById('1serving').style="none";
 			document.getElementById('3serving').style="none";
 		}
-
+		
 	}
 	function selectServing3() {
 		if (selected3 == false) {
@@ -335,10 +335,10 @@ function submitserving() {
 	}
 </script>
 
-
+	
 <script>
 	function checkCustom() {
-
+		
 		if ($("#custom").val() === undefined) {
 			selectedCustom = false;
 		} else {
@@ -352,7 +352,7 @@ function submitserving() {
 		}
 	}
 </script>
-
+	
 <script>
 	$("#type-of-meat a").click(function(e){
     e.preventDefault(); // cancel the link behaviour
@@ -380,7 +380,7 @@ function submitserving() {
 });
 
 </script>
-
+	
 <script>
 	function check_display() {
 		date=$('#date').val();
@@ -389,7 +389,7 @@ function submitserving() {
 		}
 	}
 </script>
-
+	
 
 
 <script>
