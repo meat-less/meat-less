@@ -37,16 +37,17 @@
 
 <!-- Tab content -->
 <div id="Login" class="tabcontent col-lg-5">
-  <form action="page2.html">
+
+  <form action="page3.html" name="login_form">
   <h3 class="login-header">Login</h3>
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="uname" required id="uname">
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit">Login</button>
+    <button type="submit" id="submit_button" onclick="changeForm();">Login</button>
   </div>
   </form>
 </div>
@@ -171,6 +172,18 @@ span.psw {
 </style>
 
 <script>
+
+document.getElementById("submit_button").addEventListener("click", changeForm);
+
+function changeForm(){
+  var uname = document.getElementById("uname").value;
+  if(uname == "Amy"){
+      document.login_form.action = "page3v2.html";
+  }
+  else{
+    document.login_form.action = "page3.html";
+  }
+}
 
 document.getElementById("defaultOpen").click();
 
