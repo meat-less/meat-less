@@ -103,6 +103,8 @@ nav{
 
 .card{
 	border: none;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 #logo{
@@ -125,6 +127,29 @@ nav{
 	padding-top: -20px;
 }
 
+/* recipes page */
+.card-columns{
+	padding-top: 65px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.card:hover{
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+.food{
+	width: 100%;
+}
+
+.gc-title{
+	color: black;
+}
+
+.stretched-link:hover, .gc-title:hover {
+	color: #a23131;
+}
 
 /* grilled cheese */
 
@@ -135,4 +160,13 @@ nav{
 #grilled-pic{
 	width: 100%;
 	padding-bottom: 20px;
+}
+
+#back{
+	color: black;
+}
+
+#back:hover{
+	color: #a23131;
+	text-decoration: none;
 }
