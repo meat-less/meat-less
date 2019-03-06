@@ -69,88 +69,214 @@
 <input type="text" id="myInput" onkeyup="filterRecipes()" style="width:500px; height:40px; display:block; margin: 0 auto; text-align:center;" placeholder="Search for Recipes" title="Type in a recipe">
 	</div>
 </div>
+<button type="button" class="btn btn-outline-secondary" onclick="filterBreakfast()">
+  Breakfast
+</button>
+<button type="button" class="btn btn-outline-secondary" onclick="filterLunch()">
+  Lunch
+</button>
+<button type="button" class="btn btn-outline-secondary" onclick="filterDinner()">
+  Dinner
+</button>
+<button type="button" class="btn btn-outline-secondary" onclick="filterAppetizer()">
+  Appetizer
+</button>
+<button type="button" class="btn btn-outline-secondary" onclick="filterSideDish()">
+  Side Dish
+</button>
 
+<button type="button" class="btn btn-outline-secondary" onclick="filterDessert()">
+  Dessert
+</button>
+
+<button type="button" class="btn btn-outline-secondary" onclick="filterEasy()">
+  Easy
+</button>
+
+<button type="button" class="btn btn-outline-secondary" onclick="filterReset()">
+  Reset
+</button>
 
 
 <div id="myUL" class="card-columns">
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/chris-tweten-1371729-unsplash.jpg" alt="caesar salad">
+  <div class="card lunch dinner">
+    <img class="card-img-top img-fluid" src="images/dishes/chris-tweten-1371729-unsplash.jpg" alt="caesar salad">
+
     <div class="card-block">
       <h4 class="card-title">Caesar Salad</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/christina-branco-1321250-unsplash.jpg" alt="corn">
+  <div class="card dinner">
+    <img class="card-img-top img-fluid" src="images/dishes/christina-branco-1321250-unsplash.jpg" alt="corn">
     <div class="card-block">
       <h4 class="card-title">Roasted Corn</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/clint-bustrillos-1365481-unsplash.jpg" alt="pancakes">
+  <div class="card breakfast">
+    <img class="card-img-top img-fluid" src="images/dishes/clint-bustrillos-1365481-unsplash.jpg" alt="pancakes">
     <div class="card-block">
       <h4 class="card-title">Pancakes</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/grilled-cheese.jpg" alt="grilled cheese">
+  <div class="card lunch">
+    <img class="card-img-top img-fluid" src="images/dishes/grilled-cheese.jpg" alt="grilled cheese">
     <div class="card-block">
       <a href = "grilled_cheese.html" class="stretched-link">
       <h4 class="gc-title">Grilled Cheese</h4>
     </a>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/ihssan-rami-azouagh-1359249-unsplash.jpg" alt="custard">
+  <div class="card dessert">
+    <img class="card-img-top img-fluid" src="images/dishes/ihssan-rami-azouagh-1359249-unsplash.jpg" alt="custard">
     <div class="card-block">
       <h4 class="card-title">Custard</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/jonathan-farber-655107-unsplash.jpg" alt="flatbread">
+  <div class="card lunch dinner">
+    <img class="card-img-top img-fluid" src="images/dishes/jonathan-farber-655107-unsplash.jpg" alt="flatbread">
     <div class="card-block">
       <h4 class="card-title">Flatbread</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/julien-pianetti-147831-unsplash.jpg" alt="risotto">
+  <div class="card dinner">
+    <img class="card-img-top img-fluid" src="images/dishes/julien-pianetti-147831-unsplash.jpg" alt="risotto">
     <div class="card-block">
       <h4 class="card-title">Risotto</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/klara-avsenik-1286322-unsplash.jpg" alt="veggie salad">
+  <div class="card lunch dinner">
+    <img class="card-img-top img-fluid" src="images/dishes/klara-avsenik-1286322-unsplash.jpg" alt="veggie salad">
     <div class="card-block">
       <h4 class="card-title">Veggie Salad</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/mae-mu-1384535-unsplash.jpg" alt="toast with egg">
+  <div class="card breakfast">
+    <img class="card-img-top img-fluid" src="images/dishes/mae-mu-1384535-unsplash.jpg" alt="toast with egg">
     <div class="card-block">
       <h4 class="card-title">Toast with Egg</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/maeliss-demaison-1303572-unsplash.jpg" alt="parfait">
+  <div class="card breakfast dessert">
+    <img class="card-img-top img-fluid" src="images/dishes/maeliss-demaison-1303572-unsplash.jpg" alt="parfait">
     <div class="card-block">
       <h4 class="card-title">Parfait</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/stephanie-mccabe-92136-unsplash.jpg" alt="french fries">
+  <div class="card side-dish">
+    <img class="card-img-top img-fluid" src="images/dishes/stephanie-mccabe-92136-unsplash.jpg" alt="french fries">
+
     <div class="card-block">
       <h4 class="card-title">French Fries</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/the-creative-exchange-1309305-unsplash.jpg" alt="greens salad">
+  <div class="card lunch dinner appetizer side-dish">
+    <img class="card-img-top img-fluid" src="images/dishes/the-creative-exchange-1309305-unsplash.jpg" alt="greens salad">
+
     <div class="card-block">
       <h4 class="card-title">Greens Salad</h4>
     </div>
   </div>
-  <div class="card">
-    <img class="card-img-top img-fluid food" src="images/dishes/taiana-martinez-1397200-unsplash.jpg" alt="strawberry shortcake">
+
+  <div class="card dessert">
+    <img class="card-img-top img-fluid" src="images/dishes/taiana-martinez-1397200-unsplash.jpg" alt="strawberry shortcake">
     <div class="card-block">
       <h4 class="card-title">Strawberry Shortcake</h4>
+    </div>
+  </div>
+  <div class="card lunch dinner">
+    <img class="card-img-top img-fluid" src="images/dishes/1alison-marras-323018-unsplash.jpg" alt="noodle soup">
+    <div class="card-block">
+      <h4 class="card-title">Noodle Soup</h4>
+    </div>
+  </div>
+  <div class="card lunch dinner easy">
+    <img class="card-img-top img-fluid" src="images/dishes/1dragne-marius-527803-unsplash.jpg" alt="chickpea curry with rice">
+    <div class="card-block">
+      <h4 class="card-title">Chickpea Curry with Rice</h4>
+    </div>
+  </div>
+  <div class="card lunch appetizer">
+    <img class="card-img-top img-fluid" src="images/dishes/1ella-olsson-1299905-unsplash.jpg" alt="tomato soup">
+    <div class="card-block">
+      <h4 class="card-title">Tomato Soup</h4>
+    </div>
+  </div>
+  <div class="card dinner lunch" >
+    <img class="card-img-top img-fluid" src="images/dishes/1filip-mishevski-1266642-unsplash.jpg" alt="veggie burger">
+    <div class="card-block">
+      <h4 class="card-title">Veggie Burger</h4>
+    </div>
+  </div>
+  <div class="card side-dish easy">
+    <img class="card-img-top img-fluid" src="images/dishes/1hessam-hojati-1260986-unsplash.jpg" alt="seasoned broccoli">
+    <div class="card-block">
+      <h4 class="card-title">Seasoned Broccoli</h4>
+    </div>
+  </div>
+  <div class="card breakfast">
+    <img class="card-img-top img-fluid" src="images/dishes/1jodie-morgan-464702-unsplash.jpg" alt="waffles">
+    <div class="card-block">
+      <h4 class="card-title">Waffles</h4>
+    </div>
+  </div>
+  <div class="card dessert">
+    <img class="card-img-top img-fluid" src="images/dishes/1jodie-morgan-1237849-unsplash.jpg" alt="apple turnovers">
+    <div class="card-block">
+      <h4 class="card-title">Apple Turnovers</h4>
+    </div>
+  </div>
+  <div class="card dessert breakfast">
+    <img class="card-img-top img-fluid" src="images/dishes/1joseph-gonzalez-457393-unsplash.jpg" alt="cinnamon rolls">
+    <div class="card-block">
+      <h4 class="card-title">Cinnamon Rolls</h4>
+    </div>
+  </div>
+  <div class="card appetizer">
+    <img class="card-img-top img-fluid" src="images/dishes/1juan-manuel-giraldo-grisales-629078-unsplash.jpg" alt="chips and guac">
+    <div class="card-block">
+      <h4 class="card-title">Chips with Salsa and Guacamole</h4>
+    </div>
+  </div>
+  <div class="card dessert">
+    <img class="card-img-top img-fluid" src="images/dishes/1mantra-media-58091-unsplash.jpg" alt="strawberry cake">
+    <div class="card-block">
+      <h4 class="card-title">Strawberry Cake</h4>
+    </div>
+  </div>
+  <div class="card breakfast easy">
+    <img class="card-img-top img-fluid" src="images/dishes/1mariana-medvedeva-379625-unsplash.jpg" alt="avocado toast">
+    <div class="card-block">
+      <h4 class="card-title">Avocado Toast</h4>
+    </div>
+  </div>
+  <div class="card dessert">
+    <img class="card-img-top img-fluid" src="images/dishes/1nathalie-jolie-403986-unsplash.jpg" alt="apple tart">
+    <div class="card-block">
+      <h4 class="card-title">Apple Tart</h4>
+    </div>
+  </div>
+  <div class="card breakfast">
+    <img class="card-img-top img-fluid" src="images/dishes/1nordwood-themes-213933-unsplash.jpg" alt="muffins">
+    <div class="card-block">
+      <h4 class="card-title">Breakfast Muffins</h4>
+    </div>
+  </div>
+  <div class="card dessert">
+    <img class="card-img-top img-fluid" src="images/dishes/1tina-dawson-1287364-unsplash.jpg" alt="churros">
+    <div class="card-block">
+      <h4 class="card-title">Churros and Chocolate Sauce</h4>
+    </div>
+  </div>
+  <div class="card dinner lunch">
+    <img class="card-img-top img-fluid" src="images/dishes/1victoria-shes-1298696-unsplash.jpg" alt="pizza">
+    <div class="card-block">
+      <h4 class="card-title">Pizza</h4>
+    </div>
+  </div>
+  <div class="card dinner lunch">
+    <img class="card-img-top img-fluid" src="images/dishes/1yoav-aziz-1216980-unsplash.jpg" alt="noodles">
+    <div class="card-block">
+      <h4 class="card-title">Noodle Bowl</h4>
     </div>
   </div>
 
@@ -177,7 +303,6 @@ function filterRecipes() {
     ul = document.getElementById("myUL");
     li = ul.getElementsByClassName("card");
     for (i = 0; i < li.length; i++) {
-      console.log(li)
         a = li[i].getElementsByClassName("card-title")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -185,6 +310,106 @@ function filterRecipes() {
         } else {
             li[i].style.display = "none";
         }
+    }
+}
+
+function filterDinner() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = "dinner";
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    target = ul.getElementsByClassName(input);
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+    for (i = 0; i < target.length; i++) {
+        target[i].style.display = "";
+    }
+}
+function filterLunch() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = "lunch";
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    target = ul.getElementsByClassName(input);
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+    for (i = 0; i < target.length; i++) {
+        target[i].style.display = "";
+    }
+}
+function filterBreakfast() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = "breakfast";
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    target = ul.getElementsByClassName(input);
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+    for (i = 0; i < target.length; i++) {
+        target[i].style.display = "";
+    }
+}
+function filterDessert() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = "dessert";
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    target = ul.getElementsByClassName(input);
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+    for (i = 0; i < target.length; i++) {
+        target[i].style.display = "";
+    }
+}
+function filterEasy() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = "easy";
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    target = ul.getElementsByClassName(input);
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+    for (i = 0; i < target.length; i++) {
+        target[i].style.display = "";
+    }
+}
+function filterSideDish() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = "side-dish";
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    target = ul.getElementsByClassName(input);
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+    for (i = 0; i < target.length; i++) {
+        target[i].style.display = "";
+    }
+}
+function filterAppetizer() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = "appetizer";
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    target = ul.getElementsByClassName(input);
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "none";
+    }
+    for (i = 0; i < target.length; i++) {
+        target[i].style.display = "";
+    }
+}
+function filterReset() {
+    var input, filter, ul, li, a, i, txtValue;
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "";
     }
 }
 </script>
