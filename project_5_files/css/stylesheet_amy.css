@@ -124,3 +124,15 @@ nav{
 	margin-left: 10%;
 	padding-top: -20px;
 }
+
+
+/* grilled cheese */
+
+#recipe-content{
+	padding-top: 100px;
+}
+
+#grilled-pic{
+	width: 100%;
+	padding-bottom: 20px;
+}
