@@ -151,6 +151,19 @@ nav{
 	color: #a23131;
 }
 
+.btn-outline-secondary{
+	margin: 5px;
+}
+
+#all-buttons{
+	margin-top: 50px;
+	
+	left: 50%;
+	transform: translate(15%, 0%);
+}
+
+
+
 /* grilled cheese */
 
 #recipe-content{

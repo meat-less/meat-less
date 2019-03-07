@@ -64,38 +64,41 @@
 <div style="height: 30px"></div>
 
 <div class="container-fluid text-center">
-	<div class="col-sm-9 col-md-6 col-lg-8 offset-md-2" style:"text-align: center">
+	<div class="col-sm-9 col-md-6 col-lg-8 offset-md-2" style="text-align: center">
 
 <input type="text" id="myInput" onkeyup="filterRecipes()" style="width:500px; height:40px; display:block; margin: 0 auto; text-align:center;" placeholder="Search for Recipes" title="Type in a recipe">
 	</div>
 </div>
-<button type="button" class="btn btn-outline-secondary" onclick="filterBreakfast()">
-  Breakfast
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterLunch()">
-  Lunch
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterDinner()">
-  Dinner
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterAppetizer()">
-  Appetizer
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterSideDish()">
-  Side Dish
-</button>
 
-<button type="button" class="btn btn-outline-secondary" onclick="filterDessert()">
-  Dessert
-</button>
 
-<button type="button" class="btn btn-outline-secondary" onclick="filterEasy()">
-  Easy
-</button>
 
-<button type="button" class="btn btn-outline-secondary" onclick="filterReset()">
-  Reset
-</button>
+<div id="all-buttons" class="center-block">
+  <button type="button" class="btn btn-outline-secondary" onclick="filterBreakfast()">
+    Breakfast
+  </button>
+  <button type="button" class="btn btn-outline-secondary" onclick="filterLunch()">
+    Lunch
+  </button>
+  <button type="button" class="btn btn-outline-secondary" onclick="filterDinner()">
+    Dinner
+  </button>
+  <button type="button" class="btn btn-outline-secondary" onclick="filterAppetizer()">
+    Appetizer
+  </button>
+  <button type="button" class="btn btn-outline-secondary" onclick="filterSideDish()">
+    Side Dish
+  </button>
+  <button type="button" class="btn btn-outline-secondary" onclick="filterDessert()">
+    Dessert
+  </button>
+  <button type="button" class="btn btn-outline-secondary" onclick="filterEasy()">
+    Easy
+  </button>
+  <button type="button" class="btn btn-outline-secondary" onclick="filterReset()">
+    Reset
+  </button>
+</div>
+
 
 
 <div id="myUL" class="card-columns">
