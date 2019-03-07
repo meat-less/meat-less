@@ -304,8 +304,9 @@ function filterRecipes() {
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByClassName("card");
+    console.log(li);
     for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByClassName("card-title")[0];
+        a = li[i].getElementsByTagName("h4")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
