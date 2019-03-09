@@ -122,7 +122,7 @@
     <img class="card-img-top food img-fluid" src="images/dishes/grilled-cheese.jpg" alt="grilled cheese">
     <div class="card-block">
       <a href = "grilled_cheese.html" class="stretched-link">
-      <h4 class="gc-title">Grilled Cheese</h4>
+      <h4 class="gc-title">Grilled Cheese Sandwich</h4>
     </a>
     </div>
   </div>
@@ -342,13 +342,21 @@ function filter(button){
       continue;
     }
 
+
     //filter by buttons
     var f;
     for(f=0; f<filters.length; f++){
-      if(!cardsArray[i].classes.contains(filters[f].value)){
-        li[i].style.display = "none";
-        break;
+      console.log(cardsArray[i].classes);
+      console.log(filters[f].value);
+      if(cardsArray[i].classes.contains(filters[f].value)){
+        li[i].style.display = "";
+        //refilter by text
+        if(cardsArray[i].dishTitle.toUpperCase().indexOf(input) < 0){
+          li[i].style.display = "none";
+        }
+        break;//leave before you hide it
       }
+        li[i].style.display = "none";//hide it if nothing matched
     }
   }
 }
@@ -367,7 +375,7 @@ function filterReset() {
     var b;
     for(b = 0; b<buttons.length; b++){
       buttons[b].setAttribute("aria-pressed", "false");
-      buttons[b].classList.remove("active")
+      buttons[b].classList.remove("active");
     }
 
     //clear text from search bar
