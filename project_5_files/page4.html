@@ -66,7 +66,8 @@
 <div class="container-fluid text-center">
 	<div class="col-sm-9 col-md-6 col-lg-8 offset-md-2" style="text-align: center">
 
-<input type="text" id="myInput" onkeyup="filter()" style="width:500px; height:40px; display:block; margin: 0 auto; text-align:center;" placeholder="Search for Recipes" title="Type in a recipe">
+<input type="text" id="myInput" onkeyup="filter()" style="width:500px; height:40px; display:block; margin: 0 auto; text-align:center;"
+placeholder="Search for meatless recipes" title="Type in a recipe" onfocus="this.placeholder=''" onblur="this.placeholder='Search for meatless recipes'">
 	</div>
 </div>
 
@@ -353,7 +354,7 @@ function filter(button){
         }
         break;//leave before you hide it
       }
-        li[i].style.display = "none";//hide it if nothing matched
+    li[i].style.display = "none";//hide it if nothing matched
     }
   }
 }
