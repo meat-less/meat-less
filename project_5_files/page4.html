@@ -49,6 +49,7 @@
           <ul class="dropdown-menu">
             <li><a href="index.html">Log Out</li>
             <li><a href="#">Account Settings</a></li>
+            <li><a href="attributions.html">Attributions</a></li>
           </ul>
         </li>
       </ul>
@@ -66,34 +67,30 @@
 <div class="container-fluid text-center">
 	<div class="col-sm-9 col-md-6 col-lg-8 offset-md-2" style="text-align: center">
 
-<input type="text" id="myInput" onkeyup="filterRecipes()" style="width:500px; height:40px; display:block; margin: 0 auto; text-align:center;" placeholder="Search for Recipes" title="Type in a recipe">
+<input type="text" id="myInput" onkeyup="filter()" style="width:500px; height:40px; display:block; margin: 0 auto; text-align:center;"
+placeholder="Search for meatless recipes" title="Type in a recipe" onfocus="this.placeholder=''" onblur="this.placeholder='Search for meatless recipes'">
 	</div>
 </div>
- 
+
 <div class="container-fluid text-center button-row">
-<button type="button" class="btn btn-outline-secondary" onclick="filterBreakfast()">
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value= "breakfast" onclick="filter('breakfast')">
   Breakfast
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterLunch()">
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "lunch" onclick="filter('lunch')">
   Lunch
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterDinner()">
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "dinner" onclick="filter('dinner')">
   Dinner
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterAppetizer()">
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "appetizer" onclick="filter('appetizer')">
   Appetizer
-</button>
-<button type="button" class="btn btn-outline-secondary" onclick="filterSideDish()">
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "side-dish" onclick="filter('side-dish')">
   Side Dish
-</button>
-
-<button type="button" class="btn btn-outline-secondary" onclick="filterDessert()">
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "dessert" onclick="filter('dessert')">
   Dessert
-</button>
-
-<button type="button" class="btn btn-outline-secondary" onclick="filterEasy()">
-  Easy
-</button>
+  </button>
 <button type="button" class="btn btn-outline-secondary" onclick="filterReset()">
   Reset
 </button>
@@ -103,7 +100,6 @@
 <div id="myUL" class="card-columns">
   <div class="card  lunch dinner">
     <img class="card-img-top food img-fluid" src="images/dishes/chris-tweten-1371729-unsplash.jpg" alt="caesar salad">
-
     <div class="card-block">
       <h4 class="card-title">Caesar Salad</h4>
     </div>
@@ -124,7 +120,7 @@
     <img class="card-img-top food img-fluid" src="images/dishes/grilled-cheese.jpg" alt="grilled cheese">
     <div class="card-block">
       <a href = "grilled_cheese.html" class="stretched-link">
-      <h4 class="gc-title">Grilled Cheese</h4>
+      <h4 class="gc-title">Grilled Cheese Sandwich</h4>
     </a>
     </div>
   </div>
@@ -166,14 +162,12 @@
   </div>
   <div class="card  side-dish">
     <img class="card-img-top food img-fluid" src="images/dishes/stephanie-mccabe-92136-unsplash.jpg" alt="french fries">
-
     <div class="card-block">
       <h4 class="card-title">French Fries</h4>
     </div>
   </div>
   <div class="card  lunch dinner appetizer side-dish">
     <img class="card-img-top food img-fluid" src="images/dishes/the-creative-exchange-1309305-unsplash.jpg" alt="greens salad">
-
     <div class="card-block">
       <h4 class="card-title">Greens Salad</h4>
     </div>
@@ -242,7 +236,7 @@
   <div class="card  dessert">
     <img class="card-img-top food img-fluid" src="images/dishes/1mantra-media-58091-unsplash.jpg" alt="strawberry cake">
     <div class="card-block">
-      <h4 class="card-title">Strawberry Cake</h4>
+      <h4 class="card-title">Raspberry Cake</h4>
     </div>
   </div>
   <div class="card  breakfast easy">
@@ -281,6 +275,12 @@
       <h4 class="card-title">Noodle Bowl</h4>
     </div>
   </div>
+  <div class="card dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/heather-mount-1182092-unsplash.jpg" alt="cupcakes">
+    <div class="card-block">
+      <h4 class="card-title">Mini Cupcakes</h4>
+    </div>
+  </div>
 
 </div>
 
@@ -298,237 +298,93 @@
 
 
 <script>
-function filterRecipes() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByClassName("card-title")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
+
+function filter(button){
+  //get text input
+  var myInput = document.getElementById("myInput");
+  var input = myInput.value.toUpperCase();
+  //get buttons input
+  var buttons = Array.from(document.getElementsByTagName("button"));
+  var buttonsArray = Array.prototype.map.call(buttons,
+    element =>({
+      value: element.getAttribute("value"),
+      ariaPressed: element.getAttribute("aria-pressed")
+    }));
+
+  var b;
+  for(b = 0; b<buttonsArray.length -1 ; b++){//ignore the final reset button
+    if(buttonsArray[b].value == button){
+      if(buttonsArray[b].ariaPressed == "true"){//the one you clicked has its value change
+        buttonsArray[b].ariaPressed = "false";
+      }else{
+        buttonsArray[b].ariaPressed = "true";
+      }
     }
+  }
+  var filters = buttonsArray.filter(button => {return button.ariaPressed=="true"}); // will never be true for reset
+
+  //get all cards
+  var ul = document.getElementById("myUL");
+  var li = ul.getElementsByClassName("card");
+  var cardsArray = Array.prototype.map.call(li,
+    element =>({
+      dishTitle: element.textContent,
+      classes: element.classList
+    }));
+
+  //filter the cards
+  var i;
+  for(i=0; i<cardsArray.length; i++){
+    //default is to show
+    li[i].style.display = "";
+
+    //filter by text
+    if(cardsArray[i].dishTitle.toUpperCase().indexOf(input) < 0){
+      li[i].style.display = "none";
+      continue;
+    }
+
+
+    //filter by buttons
+    var f;
+    for(f=0; f<filters.length; f++){
+      console.log(cardsArray[i].classes);
+      console.log(filters[f].value);
+      if(cardsArray[i].classes.contains(filters[f].value)){
+        li[i].style.display = "";
+        //refilter by text
+        if(cardsArray[i].dishTitle.toUpperCase().indexOf(input) < 0){
+          li[i].style.display = "none";
+        }
+        break;//leave before you hide it
+      }
+    li[i].style.display = "none";//hide it if nothing matched
+    }
+  }
 }
 
-function filterDinner() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "dinner";
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    target = ul.getElementsByClassName(input);
-    for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
-    }
-    for (i = 0; i < target.length; i++) {
-        target[i].style.display = "";
-    }
-}
-function filterLunch() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "lunch";
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    target = ul.getElementsByClassName(input);
-    for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
-    }
-    for (i = 0; i < target.length; i++) {
-        target[i].style.display = "";
-    }
-}
-function filterBreakfast() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "breakfast";
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    target = ul.getElementsByClassName(input);
-    for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
-    }
-    for (i = 0; i < target.length; i++) {
-        target[i].style.display = "";
-    }
-}
-function filterDessert() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "dessert";
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    target = ul.getElementsByClassName(input);
-    for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
-    }
-    for (i = 0; i < target.length; i++) {
-        target[i].style.display = "";
-    }
-}
-function filterEasy() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "easy";
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    target = ul.getElementsByClassName(input);
-    for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
-    }
-    for (i = 0; i < target.length; i++) {
-        target[i].style.display = "";
-    }
-}
-function filterSideDish() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "side-dish";
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    target = ul.getElementsByClassName(input);
-    for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
-    }
-    for (i = 0; i < target.length; i++) {
-        target[i].style.display = "";
-    }
-}
-function filterAppetizer() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "appetizer";
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByClassName("card");
-    target = ul.getElementsByClassName(input);
-    for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
-    }
-    for (i = 0; i < target.length; i++) {
-        target[i].style.display = "";
-    }
-}
 function filterReset() {
+    //display all cards
     var input, filter, ul, li, a, i, txtValue;
     ul = document.getElementById("myUL");
     li = ul.getElementsByClassName("card");
     for (i = 0; i < li.length; i++) {
         li[i].style.display = "";
     }
+
+    //turn buttons off
+    var buttons = document.getElementsByTagName("button");
+    var b;
+    for(b = 0; b<buttons.length; b++){
+      buttons[b].setAttribute("aria-pressed", "false");
+      buttons[b].classList.remove("active");
+    }
+
+    //clear text from search bar
+    var text = document.getElementById("myInput");
+    text.value = "";
 }
 </script>
-
-<!--
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-// Load google charts
-google.charts.load('current', {'packages':['corechart','controls']});
-google.charts.setOnLoadCallback(drawChart);
-
-// Draw the chart and set the chart values
-function drawChart() {
-
-  // Create our data table.
-  var data = google.visualization.arrayToDataTable([
-    ['TimeUnit','Month', 'Servings Eaten','Macro'],
-    ['Month','June' , 5, 'Water'],
-    ['Month','July', 7, 'Water'],
-    ['Month','August', 3, 'Water'],
-    ['Month','September', 2, 'Water'],
-    ['Month','November', 6,'Water'],
-    ['Month','December', 1,'Water'],
-    ['Month','January', 8, 'Water'],
-    ['Month','June' , 3, 'Meat'],
-    ['Month','July', 2, 'Meat'],
-    ['Month','August', 9, 'Meat'],
-    ['Month','September', 6, 'Meat'],
-    ['Month','November', 4,'Meat'],
-    ['Month','December', 3,'Meat'],
-    ['Month','January', 1, 'Meat'],
-    ['Month','June' , 5, 'CO2'],
-    ['Month','July', 4, 'CO2'],
-    ['Month','August', 9, 'CO2'],
-    ['Month','September', 3, 'CO2'],
-    ['Month','November', 2,'CO2'],
-    ['Month','December', 1,'CO2'],
-    ['Month','January', 6, 'CO2'],
-    ['Day','Monday' , 2, 'Water'],
-    ['Day','Tuesday', 9, 'Water'],
-    ['Day','Wednesday', 4, 'Water'],
-    ['Day','Thursday', 1, 'Water'],
-    ['Day','Friday', 9,'Water'],
-    ['Day','Saturday', 3,'Water'],
-    ['Day','Sunday', 4, 'Water'],
-    ['Day','Monday' , 6, 'Meat'],
-    ['Day','Tuesday', 6, 'Meat'],
-    ['Day','Wednesday', 5, 'Meat'],
-    ['Day','Thursday', 1, 'Meat'],
-    ['Day','Friday', 2,'Meat'],
-    ['Day','Saturday', 5,'Meat'],
-    ['Day','Sunday', 2, 'Meat'],
-    ['Day','Monday' , 5, 'CO2'],
-    ['Day','Tuesday', 8, 'CO2'],
-    ['Day','Wednesday', 3, 'CO2'],
-    ['Day','Thursday', 2, 'CO2'],
-    ['Day','Friday', 9,'CO2'],
-    ['Day','Saturday', 2,'CO2'],
-    ['Day','Sunday', 4, 'CO2']
-
-  ]);
-
-  // Create a dashboard.
-  var dashboard = new google.visualization.Dashboard(
-      document.getElementById('dashboard_div'));
-
-  // Create a range slider, passing some options
-  var macroRangeSlider = new google.visualization.ControlWrapper({
-    'controlType': 'CategoryFilter',
-    'containerId': 'macro_div',
-    'options': {
-      'filterColumnLabel': 'Macro',
-      'ui': {
-                label: 'Show a different effect',
-                allowTyping: false,
-                allowMultiple: false,
-                showRangeValues: true
-      }
-    }
-  });
-
-  var timeRangeSlider = new google.visualization.ControlWrapper({
-    'controlType': 'CategoryFilter',
-    'containerId': 'time_div',
-    'options': {
-      'filterColumnLabel': 'TimeUnit',
-      'ui': {
-                label: 'See more times',
-                allowTyping: false,
-                allowMultiple: false,
-                showRangeValues: true
-      }
-    }
-  });
-
-  // Create a pie chart, passing some options
-  var lineChart = new google.visualization.ChartWrapper({
-    'chartType': 'LineChart',
-    'containerId': 'chart_div',
-    'options': {
-      'width': 1000,
-      'height': 800,
-      'vAxis': {title: 'contibution'},
-      'hAxis': {title: 'time'},
-      'pieSliceText': 'value',
-      'legend': 'right'
-    },
-      'view': {'columns': [1, 2]}
-  });
-
-  dashboard.bind(macroRangeSlider, lineChart);
-  dashboard.bind(timeRangeSlider, lineChart);
-
-  dashboard.draw(data);
-}
-</script>
--->
 
 </body>
 </html>
