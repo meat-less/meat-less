@@ -69,11 +69,11 @@ nav{
 	border-radius: 25px;
 	background-color: #ab4d4d;
 	border: 10px dotted white;
-	padding: 50px 20px 0px 20px;
+	padding: 20px 20px 0px 20px;
 	height: 200px;
-	margin-left: 50px;
-	margin-right: 50px;
-
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
 }
 
 .unearned{
@@ -161,7 +161,7 @@ nav{
 
 #all-buttons{
 	margin-top: 50px;
-	
+
 	left: 50%;
 	transform: translate(15%, 0%);
 }

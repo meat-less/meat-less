@@ -187,19 +187,19 @@
   <br>
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" id="1serving" src="images/icons/noun_chicken nuggets_480472.png" alt="Card image cap" onclick="selectServing1()">
+      <img class="card-img-top" id="1serving" src="images/small_icons/small_chicken_nuggets.png" alt="chicken nuggets" onclick="selectServing1()">
       <div class="card-body">
         <p class="card-text">1 Serving</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" id="2serving" src="images/icons/noun_Chicken_477288.png" alt="Card image cap" onclick="selectServing2()">
+      <img class="card-img-top" id="2serving" src="images/small_icons/small_chicken" alt="chicken wing" onclick="selectServing2()">
       <div class="card-body">
         <p class="card-text">2 Servings</p>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" id="3serving" src="images/icons/noun_Chicken_537756.png" alt="Corn" onclick="selectServing3()">
+      <img class="card-img-top" id="3serving" src="images/small_icons/small_whole_chicken" alt="Whole Chicken" onclick="selectServing3()">
       <div class="card-body">
         <p class="card-text">3 Servings</p>
       </div>
@@ -367,19 +367,19 @@ function submitserving() {
 		var date_input=$('#date').val();
 		document.getElementById('1serving').alt=date_input;
 //		document.getElementById('serving-size-display').style.display = "block";
-		document.getElementById('1serving').src="images/icons/noun_Sausage_1512196.png";
-		document.getElementById('2serving').src="images/icons/noun_Hamburger_16953.png";
-		document.getElementById('3serving').src="images/icons/noun_Meat_549560.png";
+		document.getElementById('1serving').src="images/small_icons/small_sausage.png";
+		document.getElementById('2serving').src="images/small_icons/small_hamburger.png";
+		document.getElementById('3serving').src="images/small_icons/small_meat.png";
 	} else if (meat == 'CHICKEN') {
 //		document.getElementById('serving-size-display').style.display = "block";
-		document.getElementById('1serving').src="images/icons/noun_chicken nuggets_480472.png";
-		document.getElementById('2serving').src="images/icons/noun_Chicken_477288.png";
-		document.getElementById('3serving').src="images/icons/noun_Chicken_537756.png";
+		document.getElementById('1serving').src="images/small_icons/small_chicken_nuggets.png";
+		document.getElementById('2serving').src="images/small_icons/small_chicken.png";
+		document.getElementById('3serving').src="images/small_icons/small_whole_chicken.png";
 	} else if (meat == 'PORK') {
 //		document.getElementById('serving-size-display').style.display = "block";
-		document.getElementById('1serving').src="images/icons/noun_Bacon_4172.png";
-		document.getElementById('2serving').src="images/icons/noun_Pork_Ribs_1558986.png";
-		document.getElementById('3serving').src="images/icons/noun_pork chop_1080418.png";
+		document.getElementById('1serving').src="images/small_icons/small_bacon.png";
+		document.getElementById('2serving').src="images/small_icons/small_pork_ribs.png";
+		document.getElementById('3serving').src="images/small_icons/small_ribs.png";
 	}
 	check_display();
 });
