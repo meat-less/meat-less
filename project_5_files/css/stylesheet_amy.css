@@ -187,3 +187,15 @@ nav{
 	color: #a23131;
 	text-decoration: none;
 }
+
+#dropdownMenuButton {
+	width: 190px;
+}
+
+/*
+#submit-serving-btn {
+	background-color: #a1dd70;
+	outline-color: #a1dd70;
+	outline-width: 0;
+}
+*/
