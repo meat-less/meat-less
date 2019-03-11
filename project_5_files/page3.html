@@ -57,7 +57,7 @@
 
 
   <div class="jumbotron text-center">
-    <h1> Logging for Natalie</h1>
+    <h1 id="username" name="username"> Logging for Natalie</h1>
   </div>
 
 <!--<iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOTk0M2I4NWQtYmE3NC00MmNjLTgxZTEtYTAxODNhMzg0MTg1IiwidCI6IjdjMjg0ZDg0LThkN2UtNDJhYi1hMzEwLTQ2MzA4N2RhZjFkZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>-->
@@ -246,7 +246,11 @@
 
 <!--	</div>-->
 </div>
+<script type="text/javascript">
+  urlp=[];u=location.search.replace("?","").split("&").forEach(function(d){e=d.split("=");urlp[e[0]]=e[1];})
+  document.getElementById("username").innerHTML = urlp["uname"];
 
+</script>
 <script>
 	var meat;
 	var date;
