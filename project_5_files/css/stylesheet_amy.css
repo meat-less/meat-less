@@ -96,15 +96,28 @@ nav{
   	margin-right: auto;
 }
 
-.card-text{
+.card-title{
 	color: #a23131;
 	font-size: 26px;
+	padding-bottom: 8px;
+	margin-bottom: 0;
+}
+
+.dark-grey{
+	color: #555555;
+}
+
+.card-text{
+	color: #000000;
+	font-size: 17px;
+	padding-top: 0;
 }
 
 .card{
 	border: none;
 	padding-right: 10px;
 	padding-left: 10px;
+	margin-bottom: 10px;
 }
 
 .button-row{
