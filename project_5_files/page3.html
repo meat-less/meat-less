@@ -235,7 +235,11 @@ $(".form-control").datepicker({
     <h1></h1>
   </div>
 -->
-	
+<script type="text/javascript">
+  urlp=[];u=location.search.replace("?","").split("&").forEach(function(d){e=d.split("=");urlp[e[0]]=e[1];})
+  document.getElementById("username").innerHTML = urlp["uname"];
+
+</script>	
 	
 <script>
 $(document).ready(function(){
