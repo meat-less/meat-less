@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
 </head>
 <body>
 
@@ -28,7 +28,7 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="index.html" id="logo">Meat-less</a>
+        <a class="nav-link" href="page2.html" id="logo">Meat-less</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Log <span class="sr-only">(current)</span> </a>
@@ -47,7 +47,7 @@
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
           <img class="card-img-top" id="setting-icon" src="images/settings-cog.png" alt="Settings">
           <ul class="dropdown-menu">
-            <li><a href="#">Log Out</li>
+            <li><a href="index.html">Log Out</li>
             <li><a href="#">Account Settings</a></li>
             <li><a href="attributions.html">Attributions</a></li>
           </ul>
@@ -61,26 +61,22 @@
     <h1> Logging for Amy</h1>
   </div>
 
-<!--<iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOTk0M2I4NWQtYmE3NC00MmNjLTgxZTEtYTAxODNhMzg0MTg1IiwidCI6IjdjMjg0ZDg0LThkN2UtNDJhYi1hMzEwLTQ2MzA4N2RhZjFkZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>-->
-
-<!--
-	<div id="flex-container">
-        <div class="flex-item">
--->
+<div style="height:20px"></div>
 
 <div class="row justify-content-center">
 	<div class="col-4 col-xl-2 offset-xl-1" style="float:right">
 
 <div class="dropdown" style="float:right">
-  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <div class="dropdown col-md-11">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Type of Meat
-    <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="type-of-meat">
-    <li><a href="#" value="1" onclick="check_display()">BEEF</a></li>
-    <li><a href="#" value="2" onclick="check_display()">CHICKEN</a></li>
-    <li><a href="#" value="3" onclick="check_display()">PORK</a></li>
-  </ul>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="type-of-meat">
+    <a class="dropdown-item" href="#">BEEF</a>
+    <a class="dropdown-item" href="#">CHICKEN</a>
+    <a class="dropdown-item" href="#">PORK</a>
+  </div>
+</div>
 </div>
 
 	</div>
@@ -90,73 +86,30 @@
         <div class="flex-item">
 -->
 
-<!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
-<script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
-<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-
-<!--Font Awesome (added because you use icons in your prepend/append)-->
-<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
-
-<!-- Inline CSS based on choices in "Settings" tab -->
-<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
-
-<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-<div class="bootstrap-iso" >
- <div class="container-fluid">
-  <div class="row">
-   <div class="col-md-12 col-sm-12 col-xs-12 col-xl-12">
-    <form action="https://formden.com/post/MlKtmY4x/" class="form-horizontal" method="post">
-     <div class="form-group ">
-<!--      <label class="control-label col-sm-3 requiredField" for="date">-->
-<!--       Date-->
-<!--
-       <span class="asteriskField">
-        *
-       </span>
--->
-<!--      </label>-->
-      <div>
-       <div class="input-group col-xl-15">
-        <div class="input-group-addon">
-         <i class="fa fa-calendar">
-         </i>
+<div class="container">
+	<div class="row">
+	<div class="col-sm-7 col-xl-9">
+    <div class="form-group">
+        
+            <div class="input-group input-append date" id="datePicker">
+                <input type="text" class="form-control" name="date" style="text-align:center"/>
+                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
         </div>
-        <input class="form-control" id="date" name="date" value="" placeholder="MM/DD/YYYY" type="text" onchange="update_date()"/>
-       </div>
-      </div>
-     </div>
-
-    </form>
-   </div>
-  </div>
- </div>
-</div>
-
-</div>
-
-<!--
-	<div class="col-4 col-xl-2 offset-xl-1" style="float:right">
-
-	<div class="form-group">
-      <div class="col-sm-10 col-sm-offset-2" style="align-content:center">
-       <input name="_honey" style="display:none" type="text"/>
-       <button class="btn btn-primary " name="submit" type="submit">
-        Submit
-       </button>
-      </div>
-     </div>
-
-	</div>
--->
-
-</div>
-
-<!--
-			</div>
     </div>
--->
+		
+	</div>
+		</div>
+		
+		
+		
+	</div>
+	</div>
 
 
 
@@ -169,9 +122,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
 <script>
+$( "#datePicker" ).datepicker( "setDate", new Date());
+
+$(".form-control").datepicker({
+	orientation: "top auto",
+	todayHighlight: true,
+	autoclose: true,
+	endDate: 'today'
+});
+</script>
+	
+<script>
 	$(document).ready(function(){
 		var date_input=$('input[name="date"]'); //our date input has the name "date"
 		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+//		$( ".form-control" ).datepicker( "setDate", new Date());
 		date_input.datepicker({
 			format: 'mm/dd/yyyy',
 			container: container,
@@ -180,80 +145,117 @@
 		})
 	})
 </script>
+	
 
-
-<div class="container-fluid text-center" id="serving-size-display" style="display:none">
-  <h2>Serving Size</h2>
-  <br>
-  <div class="card-group">
-    <div class="card">
-      <img class="card-img-top" id="1serving" src="images/icons/noun_chicken nuggets_480472.png" alt="Card image cap" onclick="selectServing1()">
-      <div class="card-body">
-        <p class="card-text">1 Serving</p>
+<div class="spacer" style="height:40px"></div>
+<div id="enter-servings-stuff" style="display:none">
+	
+<div class="row justify-content-center" id="enter-servings">
+	<div class="form-group col-3 col-xl-3">
+<div class="input-group mb-3 offset-xl-2 col-xl-8">
+			<p style="padding-right: 10px; padding-top: 5px;">How many servings?</p>
+	
+<!--	<form id="custom" onchange="checkCustom()">-->
+  <input type="number" class="form-control" placeholder="Enter Servings" aria-label="Number of Servings" aria-describedby="basic-addon2" onfocus="this.placeholder = ''"
+	onblur="this.placeholder = 'Enter Servings'" min="0" value="0" step=".5" id="custom" onchange="checkCustom()">
+  <div class="input-group-append">
+    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal" style="height: 38px;">
+  ?
+</button>
+  </div>
+<!--	</form>-->
+	
+</div>
+		
+	</div>
+	</div>
+	
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">How much is a serving size?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" id="2serving" src="images/icons/noun_Chicken_477288.png" alt="Card image cap" onclick="selectServing2()">
-      <div class="card-body">
-        <p class="card-text">2 Servings</p>
+      <div class="modal-body">
+        A single serving of meat is about three ounces. This is about the size of a standard deck of cards.
+		  <img src="images/deck-of-cards.png" alt="A deck of cards" style="padding-top: 20px; text-align: center;">
       </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" id="3serving" src="images/icons/noun_Chicken_537756.png" alt="Corn" onclick="selectServing3()">
-      <div class="card-body">
-        <p class="card-text">3 Servings</p>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
       </div>
     </div>
   </div>
-	<form id="custom" onchange="checkCustom()">
-	<div class="form-group row" style="text-align:center">
-	  <div class="col-xs-2" style="margin: 0 auto; float: none">
-		<label for="ex1">or enter a custom amount</label>
-		<input class="form-control" id="ex2" type="text">
-<!--	  	<input type="submit" value="Submit">-->
-	  </div>
-	</div>
-	</form>
-<!--
-	<div>
-		<form>
-		Custom Amount: <input type="text" name="customAmount" value=""><br>
-		</form>
-	</div>
--->
-	<div style="height:50px"></div>
-	<div class="form-actions">
-    <button class="btn btn-primary " name="submit" type="submit" onclick="submitserving()">
-        Submit
-       </button>
-	</div>
-
-<div class="container-fluid text-center" id="serving-size-display" style="display:block">
-  <h2></h2>
-  <br>
-	</div>
-<!--	<div class="col-4 col-xl-2 offset-xl-1" style="text-align:center">-->
-
-<!--
-	<div class="form-group">
-      <div class="col-sm-10 col-sm-offset-2" style="align-content:center">
-       <input name="_honey" style="display:none" type="text"/>
-       <button class="btn btn-primary " name="submit" type="submit">
-        Submit
-       </button>
-      </div>
-     </div>
--->
-
-<!--	</div>-->
 </div>
+
+	<div class="row justify-content-center">
+	<div class="col-3 col-xl-1 offset-xl-0">
+	<div class="form-actions">
+    <button class="btn btn-primary " name="submit" type="submit" onclick="submitserving()" id="submit-serving-btn">
+        Submit
+       </button>
+	</div>
+		</div>
+	</div>
+	
+	
+
+<!--
+<form class="form-inline">
+	<div class="form-group mb-1">
+	<label for="servings-enter">Number of Servings</label>
+	<input type="number" class="form-control" placeholder="Enter Servings" aria-label="Number of Servings" aria-describedby="basic-addon2" onfocus="this.placeholder = ''"
+	onblur="this.placeholder = 'Enter Servings'" min="0" value="0" step=".5" id="servings-enter">
+	  <div class="input-group-append">
+    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal" style="height: 38px;">
+  ?
+</button>
+	</div>
+	<button type="submit" class="btn btn-primary mb-2">Submit</button>
+	
+
+</form>
+-->
+	
+	
+	
+	
+	
+</div>
+
+<!--
+<div style="height:50px"></div>
+<div class="jumbotron text-center">
+    <h1></h1>
+  </div>
+-->
+	
+	
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+</script>
+	
+<script>
+ $(function(){
+
+    $(".dropdown-menu a").click(function(){
+
+      $(".btn:first-child").text($(this).text());
+      $(".btn:first-child").val($(this).text());
+
+   });
+
+});
+</script>
 
 <script>
 	var meat;
 	var date;
-	var selected1 = false;
-	var selected2 = false;
-	var selected3 = false;
 	var selectedCustom = false;
 </script>
 
@@ -263,77 +265,24 @@
 	}
 </script>
 
+<!--
 <script>
 	$("#1serving").click(function(a){
     a.preventDefault(); // cancel the link behaviour
     $(this).style="border-style: solid; border-color: black";
 });
 </script>
+-->
 
 <script type="text/javascript">
 function submitserving() {
-	if (selected1 == true || selected2 == true || selected3 == true || selectedCustom == true) {
-		alert('Serving Recorded!');
-		window.location.reload();
+	if (selectedCustom == true) {
+		alert('Serving(s) Recorded!');
+		window.location.href = "page2.html";
 	} else {
-		alert('Must select a serving size.');
+		alert('Must enter a serving size.');
 	}
 }
-</script>
-
-<script>
-	function selectServing1() {
-		if (selected1 == false) {
-			document.getElementById("custom").reset();
-			selected1 = true;
-			selected2 = false;
-			selected3 = false;
-			selectedCustom = false;
-			document.getElementById('1serving').style="border-style:solid;border-color:black";
-			document.getElementById('2serving').style="none";
-			document.getElementById('3serving').style="none";
-		} else {
-			selected1 = false;
-			document.getElementById('1serving').style="none";
-			document.getElementById('2serving').style="none";
-			document.getElementById('3serving').style="none";
-		}
-	}
-	function selectServing2() {
-		if (selected2 == false) {
-			document.getElementById("custom").reset();
-			selected2 = true;
-			selected1 = false;
-			selected3 = false;
-			selectedCustom = false;
-			document.getElementById('2serving').style="border-style:solid;border-color:black";
-			document.getElementById('1serving').style="none";
-			document.getElementById('3serving').style="none";
-		} else {
-			selected2 = false;
-			document.getElementById('2serving').style="none";
-			document.getElementById('1serving').style="none";
-			document.getElementById('3serving').style="none";
-		}
-
-	}
-	function selectServing3() {
-		if (selected3 == false) {
-			document.getElementById("custom").reset();
-			selected3 = true;
-			selected1 = false;
-			selected2 = false;
-			selectedCustom = false;
-			document.getElementById('3serving').style="border-style:solid;border-color:black";
-			document.getElementById('1serving').style="none";
-			document.getElementById('2serving').style="none";
-		} else {
-			selected3 = false;
-			document.getElementById('3serving').style="none";
-			document.getElementById('1serving').style="none";
-			document.getElementById('2serving').style="none";
-		}
-	}
 </script>
 
 
@@ -344,12 +293,6 @@ function submitserving() {
 			selectedCustom = false;
 		} else {
 			selectedCustom = true;
-			selected3 = false;
-			selected1 = false;
-			selected2 = false;
-			document.getElementById('3serving').style="none";
-			document.getElementById('1serving').style="none";
-			document.getElementById('2serving').style="none";
 		}
 	}
 </script>
@@ -358,25 +301,27 @@ function submitserving() {
 	$("#type-of-meat a").click(function(e){
     e.preventDefault(); // cancel the link behaviour
     meat = $(this).text();
-    $("#dropdownMenu1").text(meat);
-	if (meat == 'BEEF') {
-		var date_input=$('#date').val();
-		document.getElementById('1serving').alt=date_input;
-//		document.getElementById('serving-size-display').style.display = "block";
-		document.getElementById('1serving').src="images/icons/noun_Sausage_1512196.png";
-		document.getElementById('2serving').src="images/icons/noun_Hamburger_16953.png";
-		document.getElementById('3serving').src="images/icons/noun_Meat_549560.png";
-	} else if (meat == 'CHICKEN') {
-//		document.getElementById('serving-size-display').style.display = "block";
-		document.getElementById('1serving').src="images/icons/noun_chicken nuggets_480472.png";
-		document.getElementById('2serving').src="images/icons/noun_Chicken_477288.png";
-		document.getElementById('3serving').src="images/icons/noun_Chicken_537756.png";
-	} else if (meat == 'PORK') {
-//		document.getElementById('serving-size-display').style.display = "block";
-		document.getElementById('1serving').src="images/icons/noun_Bacon_4172.png";
-		document.getElementById('2serving').src="images/icons/noun_Pork_Ribs_1558986.png";
-		document.getElementById('3serving').src="images/icons/noun_pork chop_1080418.png";
-	}
+	document.getElementById('enter-servings-stuff').style.display = "";
+	checkCustom();
+    $("#dropdownMenuButton").text(meat);
+//	if (meat == 'BEEF') {
+//		var date_input=$('#date').val();
+//		document.getElementById('1serving').alt=date_input;
+////		document.getElementById('serving-size-display').style.display = "block";
+//		document.getElementById('1serving').src="images/icons/noun_Sausage_1512196.png";
+//		document.getElementById('2serving').src="images/icons/noun_Hamburger_16953.png";
+//		document.getElementById('3serving').src="images/icons/noun_Meat_549560.png";
+//	} else if (meat == 'CHICKEN') {
+////		document.getElementById('serving-size-display').style.display = "block";
+//		document.getElementById('1serving').src="images/icons/noun_chicken nuggets_480472.png";
+//		document.getElementById('2serving').src="images/icons/noun_Chicken_477288.png";
+//		document.getElementById('3serving').src="images/icons/noun_Chicken_537756.png";
+//	} else if (meat == 'PORK') {
+////		document.getElementById('serving-size-display').style.display = "block";
+//		document.getElementById('1serving').src="images/icons/noun_Bacon_4172.png";
+//		document.getElementById('2serving').src="images/icons/noun_Pork_Ribs_1558986.png";
+//		document.getElementById('3serving').src="images/icons/noun_pork chop_1080418.png";
+//	}
 	check_display();
 });
 
@@ -384,9 +329,9 @@ function submitserving() {
 
 <script>
 	function check_display() {
-		date=$('#date').val();
+		date=$('#datePicker').val();
 		if ((meat == 'BEEF' || meat == 'CHICKEN' || meat == 'PORK') && date != "") {
-			document.getElementById('serving-size-display').style.display = "block";
+			document.getElementById('enter-servings').style.display = "block";
 		}
 	}
 </script>
