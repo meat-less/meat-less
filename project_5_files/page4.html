@@ -1,108 +1,446 @@
 <!DOCTYPE html>
 <html>
-<title>Page 2</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/extras.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+  <title>Recipes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--link rel="stylesheet" href="css/w3.css"-->
+  <!--link rel="stylesheet" href="css/extras.css"-->
+  <link rel="stylesheet" href="css/stylesheet_amy.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">PAGE 2</a>
-    <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">PAGE 3</a>
-    <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">PAGE 4</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="page2.html" id="logo">Meat-less</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page3.html">Log </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page2.html">Progress </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Recipes <span class="sr-only">(current)</span> </a>
+      </li>
+    </ul>
+      <ul class="nav navbar-item navbar-right">
+        <!--li class="dropdown">
+        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
+        		<span class="glyphicon glyphicon-cog"></span-->
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <img class="card-img-top" id="setting-icon" src="images/settings-cog.png" alt="Settings">
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Log Out</li>
+            <li><a href="#">Account Settings</a></li>
+            <li><a href="attributions.html">Attributions</a></li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+
+  <div class="jumbotron text-center">
+    <h1>Recipes</h1>
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 2</a>
-    <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 3</a>
-    <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 4</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
+
+<div style="height: 30px"></div>
+
+<div class="container-fluid text-center">
+	<div class="col-sm-9 col-md-6 col-lg-8 offset-md-2" style="text-align: center">
+
+<input type="text" id="myInput" onkeyup="filter()" style="width:500px; height:40px; display:block; margin: 0 auto; text-align:center;"
+placeholder="Search for meatless recipes" title="Type in a recipe" onfocus="this.placeholder=''" onblur="this.placeholder='Search for meatless recipes'">
+	</div>
 </div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">PAGE <span class="w3-hide-small">FOUR</span> LOGO</span>
-  </div>
+<div class="container-fluid text-center button-row">
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value= "breakfast" onclick="filter('breakfast')">
+  Breakfast
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "lunch" onclick="filter('lunch')">
+  Lunch
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "dinner" onclick="filter('dinner')">
+  Dinner
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "appetizer" onclick="filter('appetizer')">
+  Appetizer
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "side-dish" onclick="filter('side-dish')">
+  Side Dish
+  </button>
+  <button type="button" class="btn btn-outline-secondary" data-toggle="button" aria-pressed="false" value = "dessert" onclick="filter('dessert')">
+  Dessert
+  </button>
+<button type="button" class="btn btn-outline-secondary" onclick="filterReset()">
+  Reset
+</button>
 </div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT THING 3</h3>
-  <p class="w3-center"><em>This is my fourth page</em></p>
-  <p>
-      Blah blah blah blah. Blah blah blah blah. Blah blah blah blah. Blah blah blah blah.
-  </p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="images/2.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+
+<div id="myUL" class="card-columns">
+  <div class="card  lunch dinner">
+    <img class="card-img-top food img-fluid" src="images/dishes/chris-tweten-1371729-unsplash.jpg" alt="caesar salad">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Caesar Salad</h4>
+      </a>
     </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="card  dinner">
+    <img class="card-img-top food img-fluid" src="images/dishes/christina-branco-1321250-unsplash.jpg" alt="corn">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Roasted Corn</h4>
+      </a>
     </div>
   </div>
+  <div class="card  breakfast">
+    <img class="card-img-top food img-fluid" src="images/dishes/clint-bustrillos-1365481-unsplash.jpg" alt="pancakes">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Pancakes</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  lunch">
+    <img class="card-img-top food img-fluid" src="images/dishes/grilled-cheese.jpg" alt="grilled cheese">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Grilled Cheese Sandwich</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/ihssan-rami-azouagh-1359249-unsplash.jpg" alt="custard">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Custard</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  lunch dinner">
+    <img class="card-img-top food img-fluid" src="images/dishes/jonathan-farber-655107-unsplash.jpg" alt="flatbread">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Flatbread</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dinner">
+    <img class="card-img-top food img-fluid" src="images/dishes/julien-pianetti-147831-unsplash.jpg" alt="risotto">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Risotto</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  lunch dinner">
+    <img class="card-img-top food img-fluid" src="images/dishes/klara-avsenik-1286322-unsplash.jpg" alt="veggie salad">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Veggie Salad</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  breakfast">
+    <img class="card-img-top food img-fluid" src="images/dishes/mae-mu-1384535-unsplash.jpg" alt="toast with egg">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Toast with Egg</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  breakfast dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/maeliss-demaison-1303572-unsplash.jpg" alt="parfait">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Parfait</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  side-dish">
+    <img class="card-img-top food img-fluid" src="images/dishes/stephanie-mccabe-92136-unsplash.jpg" alt="french fries">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">French Fries</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  lunch dinner appetizer side-dish">
+    <img class="card-img-top food img-fluid" src="images/dishes/the-creative-exchange-1309305-unsplash.jpg" alt="greens salad">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Greens Salad</h4>
+      </a>
+    </div>
+  </div>
+
+  <div class="card  dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/taiana-martinez-1397200-unsplash.jpg" alt="strawberry shortcake">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Strawberry Shortcake</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  lunch dinner">
+    <img class="card-img-top food img-fluid" src="images/dishes/1alison-marras-323018-unsplash.jpg" alt="noodle soup">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Noodle Soup</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  lunch dinner easy">
+    <img class="card-img-top food img-fluid" src="images/dishes/1dragne-marius-527803-unsplash.jpg" alt="chickpea curry with rice">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Chickpea Curry with Rice</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  lunch appetizer">
+    <img class="card-img-top food img-fluid" src="images/dishes/1ella-olsson-1299905-unsplash.jpg" alt="tomato soup">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Tomato Soup</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dinner lunch" >
+    <img class="card-img-top food img-fluid" src="images/dishes/1filip-mishevski-1266642-unsplash.jpg" alt="veggie burger">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Veggie Burger</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  side-dish easy">
+    <img class="card-img-top food img-fluid" src="images/dishes/1hessam-hojati-1260986-unsplash.jpg" alt="seasoned broccoli">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Seasoned Broccoli</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  breakfast">
+    <img class="card-img-top food img-fluid" src="images/dishes/1jodie-morgan-464702-unsplash.jpg" alt="waffles">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Waffles</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/1jodie-morgan-1237849-unsplash.jpg" alt="apple turnovers">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Apple Turnover</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dessert breakfast">
+    <img class="card-img-top food img-fluid" src="images/dishes/1joseph-gonzalez-457393-unsplash.jpg" alt="cinnamon rolls">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Cinnamon Rolls</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  appetizer">
+    <img class="card-img-top food img-fluid" src="images/dishes/1juan-manuel-giraldo-grisales-629078-unsplash.jpg" alt="chips and guac">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Chips with Salsa and Guacamole</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/1mantra-media-58091-unsplash.jpg" alt="strawberry cake">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Raspberry Cake</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  breakfast easy">
+    <img class="card-img-top food img-fluid" src="images/dishes/1mariana-medvedeva-379625-unsplash.jpg" alt="avocado toast">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Avocado Toast</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/1nathalie-jolie-403986-unsplash.jpg" alt="apple tart">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Apple Tart</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  breakfast">
+    <img class="card-img-top food img-fluid" src="images/dishes/1nordwood-themes-213933-unsplash.jpg" alt="muffins">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Breakfast Muffins</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/1tina-dawson-1287364-unsplash.jpg" alt="churros">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Churros and Chocolate Sauce</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dinner lunch">
+    <img class="card-img-top food img-fluid" src="images/dishes/1victoria-shes-1298696-unsplash.jpg" alt="pizza">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Pizza</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card  dinner lunch">
+    <img class="card-img-top food img-fluid" src="images/dishes/1yoav-aziz-1216980-unsplash.jpg" alt="noodles">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Noodle Bowl</h4>
+      </a>
+    </div>
+  </div>
+  <div class="card dessert">
+    <img class="card-img-top food img-fluid" src="images/dishes/heather-mount-1182092-unsplash.jpg" alt="cupcakes">
+    <div class="card-block">
+      <a href = "grilled_cheese.html" class="stretched-link">
+        <h4 class="gc-title">Mini Cupcakes</h4>
+      </a>
+    </div>
+  </div>
+
 </div>
 
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+
+
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+
 
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+
+function filter(button){
+  //get text input
+  var myInput = document.getElementById("myInput");
+  var input = myInput.value.toUpperCase();
+  //get buttons input
+  var buttons = Array.from(document.getElementsByTagName("button"));
+  var buttonsArray = Array.prototype.map.call(buttons,
+    element =>({
+      value: element.getAttribute("value"),
+      ariaPressed: element.getAttribute("aria-pressed")
+    }));
+
+  var b;
+  for(b = 0; b<buttonsArray.length -1 ; b++){//ignore the final reset button
+    if(buttonsArray[b].value == button){
+      if(buttonsArray[b].ariaPressed == "true"){//the one you clicked has its value change
+        buttonsArray[b].ariaPressed = "false";
+      }else{
+        buttonsArray[b].ariaPressed = "true";
+      }
+    }
+  }
+  var filters = buttonsArray.filter(button => {return button.ariaPressed=="true"}); // will never be true for reset
+
+  //get all cards
+  var ul = document.getElementById("myUL");
+  var li = ul.getElementsByClassName("card");
+  var cardsArray = Array.prototype.map.call(li,
+    element =>({
+      dishTitle: element.textContent,
+      classes: element.classList
+    }));
+
+  //filter the cards
+  var i;
+  for(i=0; i<cardsArray.length; i++){
+    //default is to show
+    li[i].style.display = "";
+
+    //filter by text
+    if(cardsArray[i].dishTitle.toUpperCase().indexOf(input) < 0){
+      li[i].style.display = "none";
+      continue;
+    }
+
+
+    //filter by buttons
+    var f;
+    for(f=0; f<filters.length; f++){
+      console.log(cardsArray[i].classes);
+      console.log(filters[f].value);
+      if(cardsArray[i].classes.contains(filters[f].value)){
+        li[i].style.display = "";
+        //refilter by text
+        if(cardsArray[i].dishTitle.toUpperCase().indexOf(input) < 0){
+          li[i].style.display = "none";
+        }
+        break;//leave before you hide it
+      }
+    li[i].style.display = "none";//hide it if nothing matched
+    }
+  }
 }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+function filterReset() {
+    //display all cards
+    var input, filter, ul, li, a, i, txtValue;
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("card");
+    for (i = 0; i < li.length; i++) {
+        li[i].style.display = "";
     }
-}
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
+    //turn buttons off
+    var buttons = document.getElementsByTagName("button");
+    var b;
+    for(b = 0; b<buttons.length; b++){
+      buttons[b].setAttribute("aria-pressed", "false");
+      buttons[b].classList.remove("active");
     }
+
+    //clear text from search bar
+    var text = document.getElementById("myInput");
+    text.value = "";
 }
 </script>
 

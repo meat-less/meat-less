@@ -67,13 +67,13 @@ nav{
 
 .badges{
 	border-radius: 25px;
-	background-color: #a23131;
+	background-color: #ab4d4d;
 	border: 10px dotted white;
-	padding: 50px 20px 0px 20px;
+	padding: 20px 20px 0px 20px;
 	height: 200px;
-	margin-left: 50px;
-	margin-right: 50px;
-
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
 }
 
 .unearned{
@@ -103,6 +103,12 @@ nav{
 
 .card{
 	border: none;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.button-row{
+	margin: 10px;
 }
 
 #logo{
@@ -124,3 +130,72 @@ nav{
 	margin-left: 10%;
 	padding-top: -20px;
 }
+
+/* recipes page */
+.card-columns{
+	padding-top: 65px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.card:hover{
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+.food{
+	width: 100%;
+}
+
+.gc-title{
+	color: black;
+}
+
+.stretched-link:hover, .gc-title:hover {
+	color: #a23131;
+}
+
+.btn-outline-secondary{
+	margin: 5px;
+}
+
+#all-buttons{
+	margin-top: 50px;
+
+	left: 50%;
+	transform: translate(15%, 0%);
+}
+
+
+
+/* grilled cheese */
+
+#recipe-content{
+	padding-top: 100px;
+}
+
+#grilled-pic{
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+#back{
+	color: black;
+}
+
+#back:hover{
+	color: #a23131;
+	text-decoration: none;
+}
+
+#dropdownMenuButton {
+	width: 190px;
+}
+
+/*
+#submit-serving-btn {
+	background-color: #a1dd70;
+	outline-color: #a1dd70;
+	outline-width: 0;
+}
+*/
