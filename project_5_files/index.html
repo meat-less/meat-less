@@ -25,19 +25,8 @@
     <p class="subtitle">An app to help you eat less meat</p>
   </div>
 
-<!-- Tab links -->
-<div class="container-fluid">
-<div class="row">
-	<div class="col-lg-1"></div>
-	<div class="tab col-lg-4" id="select">
-		<button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
-		<button class="tablinks" onclick="openTab(event, 'Register')">Create an Account</button>
-	</div>
-	<div class="col-lg-1"></div>
-
 <!-- Tab content -->
 <div id="Login" class="tabcontent col-lg-5">
-
   <form action="page3.html" name="login_form">
   <h3 class="login-header">Login</h3>
   <div class="container">
@@ -47,13 +36,15 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit" id="submit_button" onclick="changeForm();">Login</button>
+    <button type="submit" id="submit_button">Login</button>
+    <button id= "create-account" class="tablinks" onclick="openTab(event, 'Register')">Create an Account</button>
+
   </div>
   </form>
 </div>
 
 <div id="Register" class="tabcontent col-lg-5">
-  <form action="page2.html">
+  <form action="page3.html">
   <h3 class="login-header">Register</h3>
   <div class="container">
     <label for="uname"><b>Username</b></label>
@@ -62,12 +53,11 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit">Register</button>
- 
+    <button type="submit" >Register</button>
+    <button id="login-account" class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Already have an Account?</button>
+
   </div>
 </form>
-</div>
-</div>
 </div>
 
 <style type="text/css">
@@ -144,6 +134,14 @@ button {
   width: 100%;
 }
 
+#create-account {
+  background-color: lightgray;
+}
+
+#login-account {
+  background-color: lightgray;
+}
+
 /* Add a hover effect for buttons */
 button:hover {
   opacity: 0.8;
@@ -173,25 +171,13 @@ span.psw {
 
 <script>
 
-document.getElementById("submit_button").addEventListener("click", changeForm);
-
-function changeForm(){
-  var uname = document.getElementById("uname").value;
-  if(uname == "Amy"){
-      document.login_form.action = "page3v2.html";
-  }
-  else{
-    document.login_form.action = "page3.html";
-  }
-}
-
-document.getElementById("defaultOpen").click();
+document.getElementById("login-account").click();
 
 function openTab(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
+  // Get all elements with class="tabcontent" and hide themm
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
