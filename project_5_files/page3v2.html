@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 </head>
 <body>
 
@@ -31,13 +31,13 @@
         <a class="nav-link" href="page2.html" id="logo">Meat-less</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Log <span class="sr-only">(current)</span> </a>
+        <a class="nav-link" href="#"><img class="nav-bar-icon" src="images/small_icons/small_log.png" alt="log"> Log<span class="sr-only">(current)</span> </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="page2.html">Progress </a>
+        <a class="nav-link" href="page2.html"><img class="nav-bar-icon" src="images/small_icons/small_graph.png" alt="graph"> Progress</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="page4.html">Recipes</a>
+        <a class="nav-link" href="page4.html"><img class="nav-bar-icon" src="images/small_icons/small_spoon.png" alt="spoon"> Recipes</a>
       </li>
     </ul>
       <ul class="nav navbar-item navbar-right">
@@ -95,19 +95,19 @@
 	<div class="row">
 	<div class="col-sm-7 col-xl-9">
     <div class="form-group">
-        
+
             <div class="input-group input-append date" id="datePicker">
                 <input type="text" class="form-control" name="date" style="text-align:center"/>
                 <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>
         </div>
     </div>
-		
+
 	</div>
 		</div>
-		
-		
-		
+
+
+
 	</div>
 	</div>
 
@@ -131,7 +131,7 @@ $(".form-control").datepicker({
 	endDate: 'today'
 });
 </script>
-	
+
 <script>
 	$(document).ready(function(){
 		var date_input=$('input[name="date"]'); //our date input has the name "date"
@@ -145,16 +145,16 @@ $(".form-control").datepicker({
 		})
 	})
 </script>
-	
+
 
 <div class="spacer" style="height:40px"></div>
 <div id="enter-servings-stuff" style="display:none">
-	
+
 <div class="row justify-content-center" id="enter-servings">
 	<div class="form-group col-3 col-xl-3">
 <div class="input-group mb-3 offset-xl-2 col-xl-8">
 			<p style="padding-right: 10px; padding-top: 5px;">How many servings?</p>
-	
+
 <!--	<form id="custom" onchange="checkCustom()">-->
   <input type="number" class="form-control" placeholder="Enter Servings" aria-label="Number of Servings" aria-describedby="basic-addon2" onfocus="this.placeholder = ''"
 	onblur="this.placeholder = 'Enter Servings'" min="0" value="0" step=".5" id="custom" onchange="checkCustom()">
@@ -164,12 +164,12 @@ $(".form-control").datepicker({
 </button>
   </div>
 <!--	</form>-->
-	
+
 </div>
-		
+
 	</div>
 	</div>
-	
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -200,8 +200,8 @@ $(".form-control").datepicker({
 	</div>
 		</div>
 	</div>
-	
-	
+
+
 
 <!--
 <form class="form-inline">
@@ -215,15 +215,15 @@ $(".form-control").datepicker({
 </button>
 	</div>
 	<button type="submit" class="btn btn-primary mb-2">Submit</button>
-	
+
 
 </form>
 -->
-	
-	
-	
-	
-	
+
+
+
+
+
 </div>
 
 <!--
@@ -232,14 +232,14 @@ $(".form-control").datepicker({
     <h1></h1>
   </div>
 -->
-	
-	
+
+
 <script>
 $(document).ready(function(){
-  $('[data-toggle="popover"]').popover();   
+  $('[data-toggle="popover"]').popover();
 });
 </script>
-	
+
 <script>
  $(function(){
 
