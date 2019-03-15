@@ -216,3 +216,8 @@ nav{
 	outline-width: 0;
 }
 */
+
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
