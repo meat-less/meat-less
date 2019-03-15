@@ -14,6 +14,11 @@ nav{
 	background-color: #fdfff0;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.nav-bar-icon{
+	height: 1em;
+	padding-left: 0.5em;
+
+}
 
 #landing{
 	padding: 40px;
@@ -67,7 +72,7 @@ nav{
 
 .badges{
 	border-radius: 25px;
-	background-color: #ab4d4d;
+	background-color: #a23131;
 	border: 10px dotted white;
 	padding: 20px 20px 0px 20px;
 	height: 200px;
@@ -96,15 +101,28 @@ nav{
   	margin-right: auto;
 }
 
-.card-text{
+.card-title{
 	color: #a23131;
 	font-size: 26px;
+	padding-bottom: 8px;
+	margin-bottom: 0;
+}
+
+.dark-grey{
+	color: #555555;
+}
+
+.card-text{
+	color: #000000;
+	font-size: 17px;
+	padding-top: 0;
 }
 
 .card{
 	border: none;
 	padding-right: 10px;
 	padding-left: 10px;
+	margin-bottom: 10px;
 }
 
 .button-row{

@@ -3,6 +3,10 @@
 
 <head>
   <title>Progress</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -17,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 <body>
 
@@ -31,13 +36,13 @@
         <a class="nav-link" href="#" id="logo">Meat-less</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="page3.html">Log</a>
+        <a class="nav-link" href="page3.html"><img class="nav-bar-icon" src="images/small_icons/small_log.png" alt="log"> Log</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Progress <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><img class="nav-bar-icon" src="images/small_icons/small_graph.png" alt="graph"> Progress<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="page4.html">Recipes</a>
+        <a class="nav-link" href="page4.html"><img class="nav-bar-icon" src="images/small_icons/small_spoon.png" alt="spoon"> Recipes</a>
       </li>
     </ul>
       <ul class="nav navbar-item navbar-right">
@@ -69,7 +74,7 @@
   <div class = "row">
     <div class = "col-sm-4">
       <div class="card" >
-        <img class="card-img-top" src="images/small_icons/small_medal.png" alt="medal">
+        <img class="card-img-top" src="images/small_icons/small_medal_gold.png" alt="medal">
         <div class="card-body">
           <h5 class="card-title">First Log</h5>
           <p class="card-text">Log 1 item</p>
@@ -78,7 +83,7 @@
     </div>
     <div class = "col-sm-4">
       <div class="card" >
-        <img class="card-img-top" src="images/small_icons/small_medal.png" alt="medal">
+        <img class="card-img-top" src="images/small_icons/small_medal_gold.png" alt="medal">
         <div class="card-body">
           <h5 class="card-title">Good Habits</h5>
           <p class="card-text">Log for 5 days in a row</p>
@@ -87,9 +92,9 @@
     </div>
     <div class = "col-sm-4">
       <div class="card" >
-        <img class="card-img-top" src="images/small_icons/small_medal.png" alt="medal">
+        <img class="card-img-top" src="images/small_icons/small_medal_grey.png" alt="medal">
         <div class="card-body">
-          <h5 class="card-title">Water Lover</h5>
+          <h5 class="card-title dark-grey">Water Lover</h5>
           <p class="card-text">Save 30 gallons of water</p>
         </div>
       </div>
@@ -98,7 +103,7 @@
   <div class = "row">
     <div class = "col-sm-4">
       <div class="card" >
-        <img class="card-img-top" src="images/small_icons/small_medal.png" alt="medal">
+        <img class="card-img-top" src="images/small_icons/small_medal_gold.png" alt="medal">
         <div class="card-body">
           <h5 class="card-title">Fresh Air</h5>
           <p class="card-text">Eat 5 meals without producing 2 lbs of carbon dioxide</p>
@@ -107,103 +112,60 @@
     </div>
     <div class = "col-sm-4">
       <div class="card">
-        <img class="card-img-top" src="images/small_icons/small_medal.png" alt="medal">
+        <img class="card-img-top" src="images/small_icons/small_medal_grey.png" alt="medal">
         <div class="card-body">
-          <h5 class="card-title">Fire</h5>
+          <h5 class="card-title dark-grey">Fire</h5>
           <p class="card-text">Log for 10 days in a row</p>
+        </div>
+      </div>
+    </div>
+    <div class = "col-sm-4">
+      <div class="card">
+        <img class="card-img-top" src="images/small_icons/small_medal_gold.png" alt="medal">
+        <div class="card-body">
+          <h5 class="card-title">Animal Savior</h5>
+          <p class="card-text">Saved your first animal!</p>
         </div>
       </div>
     </div>
   </div>
 
 <div class="container-fluid text-center">
-  <h2>WATER SAVED</h2>
-  <br>
-  <div class="card-group">
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_water.png" alt="droplet">
-      <div class="card-body">
-        <p class="card-text">27 gallons</p>
-      </div>
+<!-- Slideshow container -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="images/Progress/animals.jpg" alt="animals">
     </div>
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_shower.png" alt="shower">
-      <div class="card-body">
-        <p class="card-text">1.5 showers</p>
-      </div>
+
+    <div class="item">
+      <img src="images/Progress/water.jpg" alt="water">
     </div>
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_corn.png" alt="Corn">
-      <div class="card-body">
-        <p class="card-text">0.7 square miles watered</p>
-      </div>
+
+    <div class="item">
+      <img src="images/Progress/carbon.jpg" alt="carbon">
     </div>
   </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-
-<div class="container-fluid text-center">
-  <h2>CARBON DIOXIDE NOT EMITTED</h2>
-  <br>
-  <div class="card-group">
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_co2.png" alt="co2 cloud">
-      <div class="card-body">
-        <p class="card-text">70 lbs</p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_car.png" alt="car">
-      <div class="card-body">
-        <p class="card-text">57 miles</p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_lightbulb.png" alt="lightbulb">
-      <div class="card-body">
-        <p class="card-text">341 hours of light</p>
-      </div>
-    </div>
-  </div>
 </div>
-
-<div class="container-fluid text-center">
-  <h2>ANIMALS SAVED</h2>
-  <br>
-  <div class="card-group">
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_cow.png" alt="cow">
-      <div class="card-body">
-        <p class="card-text">2 cows</p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_pig.png" alt="pig">
-      <div class="card-body">
-        <p class="card-text">3 pigs</p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="images/small_icons/small_animal_chicken.png" alt="chicken">
-      <div class="card-body">
-        <p class="card-text">5 chickens</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!--footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer-->
 
 
 
