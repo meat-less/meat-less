@@ -80,6 +80,7 @@ nav{
 	text-align: center;
 }
 
+
 .unearned{
 	background-color: #e8ecd6;
 	border: none;
@@ -91,6 +92,10 @@ nav{
 
 .earned-text{
 	color: white;
+}
+
+#myCarousel{
+	padding: 40px;
 }
 
 .card-img-top{
